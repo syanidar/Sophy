@@ -1,0 +1,15 @@
+Configuring hp2pretty-0.6...
+Building hp2pretty-0.6...
+Preprocessing executable 'hp2pretty' for hp2pretty-0.6...
+[1 of 9] Compiling Graphics         ( src\Graphics.hs, .stack-work\dist\b7fec021\build\hp2pretty\hp2pretty-tmp\Graphics.o )
+[2 of 9] Compiling Types            ( src\Types.hs, .stack-work\dist\b7fec021\build\hp2pretty\hp2pretty-tmp\Types.o )
+[3 of 9] Compiling SVG              ( src\SVG.hs, .stack-work\dist\b7fec021\build\hp2pretty\hp2pretty-tmp\SVG.o )
+[4 of 9] Compiling Print            ( src\Print.hs, .stack-work\dist\b7fec021\build\hp2pretty\hp2pretty-tmp\Print.o )
+[5 of 9] Compiling Bands            ( src\Bands.hs, .stack-work\dist\b7fec021\build\hp2pretty\hp2pretty-tmp\Bands.o )
+[6 of 9] Compiling Prune            ( src\Prune.hs, .stack-work\dist\b7fec021\build\hp2pretty\hp2pretty-tmp\Prune.o )
+[7 of 9] Compiling Total            ( src\Total.hs, .stack-work\dist\b7fec021\build\hp2pretty\hp2pretty-tmp\Total.o )
+[8 of 9] Compiling Pretty           ( src\Pretty.hs, .stack-work\dist\b7fec021\build\hp2pretty\hp2pretty-tmp\Pretty.o )
+[9 of 9] Compiling Main             ( src\Main.hs, .stack-work\dist\b7fec021\build\hp2pretty\hp2pretty-tmp\Main.o )
+Linking .stack-work\dist\b7fec021\build\hp2pretty\hp2pretty.exe ...
+Installing executable(s) in
+C:\Users\PCUser\OneDrive\Haskell\Sophy\.stack-work\install\ef077761\bin

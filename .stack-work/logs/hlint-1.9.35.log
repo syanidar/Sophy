@@ -1,0 +1,57 @@
+Configuring hlint-1.9.35...
+Building hlint-1.9.35...
+Preprocessing library hlint-1.9.35...
+[ 1 of 46] Compiling Test.Util        ( src\Test\Util.hs, .stack-work\dist\b7fec021\build\Test\Util.o )
+[ 2 of 46] Compiling Test.InputOutput ( src\Test\InputOutput.hs, .stack-work\dist\b7fec021\build\Test\InputOutput.o )
+[ 3 of 46] Compiling HSE.Type         ( src\HSE\Type.hs, .stack-work\dist\b7fec021\build\HSE\Type.o )
+[ 4 of 46] Compiling HSE.FreeVars     ( src\HSE\FreeVars.hs, .stack-work\dist\b7fec021\build\HSE\FreeVars.o )
+[ 5 of 46] Compiling HSE.Util         ( src\HSE\Util.hs, .stack-work\dist\b7fec021\build\HSE\Util.o )
+[ 6 of 46] Compiling HSE.Match        ( src\HSE\Match.hs, .stack-work\dist\b7fec021\build\HSE\Match.o )
+[ 7 of 46] Compiling HSE.Scope        ( src\HSE\Scope.hs, .stack-work\dist\b7fec021\build\HSE\Scope.o )
+[ 8 of 46] Compiling HsColour         ( src\HsColour.hs, .stack-work\dist\b7fec021\build\HsColour.o )
+[ 9 of 46] Compiling Parallel         ( src\Parallel.hs, .stack-work\dist\b7fec021\build\Parallel.o )
+[10 of 46] Compiling Paths_hlint      ( .stack-work\dist\b7fec021\build\autogen\Paths_hlint.hs, .stack-work\dist\b7fec021\build\Paths_hlint.o )
+[11 of 46] Compiling Util             ( src\Util.hs, .stack-work\dist\b7fec021\build\Util.o )
+[12 of 46] Compiling CmdLine          ( src\CmdLine.hs, .stack-work\dist\b7fec021\build\CmdLine.o )
+[13 of 46] Compiling HSE.Bracket      ( src\HSE\Bracket.hs, .stack-work\dist\b7fec021\build\HSE\Bracket.o )
+[14 of 46] Compiling HSE.Evaluate     ( src\HSE\Evaluate.hs, .stack-work\dist\b7fec021\build\HSE\Evaluate.o )
+[15 of 46] Compiling HSE.All          ( src\HSE\All.hs, .stack-work\dist\b7fec021\build\HSE\All.o )
+[16 of 46] Compiling Settings         ( src\Settings.hs, .stack-work\dist\b7fec021\build\Settings.o )
+[17 of 46] Compiling Idea             ( src\Idea.hs, .stack-work\dist\b7fec021\build\Idea.o )
+[18 of 46] Compiling Report           ( src\Report.hs, .stack-work\dist\b7fec021\build\Report.o )
+[19 of 46] Compiling Test.Proof       ( src\Test\Proof.hs, .stack-work\dist\b7fec021\build\Test\Proof.o )
+[20 of 46] Compiling Refact           ( src\Refact.hs, .stack-work\dist\b7fec021\build\Refact.o )
+[21 of 46] Compiling Hint.Type        ( src\Hint\Type.hs, .stack-work\dist\b7fec021\build\Hint\Type.o )
+[22 of 46] Compiling Hint.List        ( src\Hint\List.hs, .stack-work\dist\b7fec021\build\Hint\List.o )
+[23 of 46] Compiling Hint.Monad       ( src\Hint\Monad.hs, .stack-work\dist\b7fec021\build\Hint\Monad.o )
+[24 of 46] Compiling Hint.Bracket     ( src\Hint\Bracket.hs, .stack-work\dist\b7fec021\build\Hint\Bracket.o )
+[25 of 46] Compiling Hint.Naming      ( src\Hint\Naming.hs, .stack-work\dist\b7fec021\build\Hint\Naming.o )
+[26 of 46] Compiling Hint.Pattern     ( src\Hint\Pattern.hs, .stack-work\dist\b7fec021\build\Hint\Pattern.o )
+[27 of 46] Compiling Hint.Import      ( src\Hint\Import.hs, .stack-work\dist\b7fec021\build\Hint\Import.o )
+[28 of 46] Compiling Hint.Pragma      ( src\Hint\Pragma.hs, .stack-work\dist\b7fec021\build\Hint\Pragma.o )
+[29 of 46] Compiling Hint.Extensions  ( src\Hint\Extensions.hs, .stack-work\dist\b7fec021\build\Hint\Extensions.o )
+[30 of 46] Compiling Hint.Duplicate   ( src\Hint\Duplicate.hs, .stack-work\dist\b7fec021\build\Hint\Duplicate.o )
+[31 of 46] Compiling Hint.Comment     ( src\Hint\Comment.hs, .stack-work\dist\b7fec021\build\Hint\Comment.o )
+[32 of 46] Compiling Hint.Unsafe      ( src\Hint\Unsafe.hs, .stack-work\dist\b7fec021\build\Hint\Unsafe.o )
+[33 of 46] Compiling Hint.Util        ( src\Hint\Util.hs, .stack-work\dist\b7fec021\build\Hint\Util.o )
+[34 of 46] Compiling Hint.ListRec     ( src\Hint\ListRec.hs, .stack-work\dist\b7fec021\build\Hint\ListRec.o )
+[35 of 46] Compiling Test.Translate   ( src\Test\Translate.hs, .stack-work\dist\b7fec021\build\Test\Translate.o )
+[36 of 46] Compiling Hint.Match       ( src\Hint\Match.hs, .stack-work\dist\b7fec021\build\Hint\Match.o )
+[37 of 46] Compiling Hint.Lambda      ( src\Hint\Lambda.hs, .stack-work\dist\b7fec021\build\Hint\Lambda.o )
+[38 of 46] Compiling Hint.All         ( src\Hint\All.hs, .stack-work\dist\b7fec021\build\Hint\All.o )
+[39 of 46] Compiling Apply            ( src\Apply.hs, .stack-work\dist\b7fec021\build\Apply.o )
+[40 of 46] Compiling Language.Haskell.HLint2 ( src\Language\Haskell\HLint2.hs, .stack-work\dist\b7fec021\build\Language\Haskell\HLint2.o )
+[41 of 46] Compiling Grep             ( src\Grep.hs, .stack-work\dist\b7fec021\build\Grep.o )
+[42 of 46] Compiling Test.Annotations ( src\Test\Annotations.hs, .stack-work\dist\b7fec021\build\Test\Annotations.o )
+[43 of 46] Compiling Test.All         ( src\Test\All.hs, .stack-work\dist\b7fec021\build\Test\All.o )
+[44 of 46] Compiling HLint            ( src\HLint.hs, .stack-work\dist\b7fec021\build\HLint.o )
+[45 of 46] Compiling Language.Haskell.HLint ( src\Language\Haskell\HLint.hs, .stack-work\dist\b7fec021\build\Language\Haskell\HLint.o )
+[46 of 46] Compiling Language.Haskell.HLint3 ( src\Language\Haskell\HLint3.hs, .stack-work\dist\b7fec021\build\Language\Haskell\HLint3.o )
+Preprocessing executable 'hlint' for hlint-1.9.35...
+[1 of 1] Compiling Main             ( src\Main.hs, .stack-work\dist\b7fec021\build\hlint\hlint-tmp\Main.o )
+Linking .stack-work\dist\b7fec021\build\hlint\hlint.exe ...
+Installing library in
+C:\Users\PCUser\AppData\Roaming\stack\snapshots\a2932497\lib\x86_64-windows-ghc-8.0.1\hlint-1.9.35-Au3FB6FHgTz6zI4pChBRNX
+Installing executable(s) in
+C:\Users\PCUser\AppData\Roaming\stack\snapshots\a2932497\bin
+Registering hlint-1.9.35...

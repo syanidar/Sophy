@@ -1,0 +1,17 @@
+[1 of 1] Compiling Main             ( C:\Users\PCUser\AppData\Local\Temp\stack11140\distributive-0.5.0.2\Setup.lhs, C:\Users\PCUser\AppData\Local\Temp\stack11140\distributive-0.5.0.2\.stack-work\dist\b7fec021\setup\Main.o )
+
+C:\Users\PCUser\AppData\Local\Temp\stack11140\distributive-0.5.0.2\Setup.lhs:44:69: warning: [-Wdeprecations]
+    In the use of type constructor or class `InstalledPackageId'
+    (imported from Distribution.Package):
+    Deprecated: "Use UnitId instead"
+Linking C:\Users\PCUser\AppData\Local\Temp\stack11140\distributive-0.5.0.2\.stack-work\dist\b7fec021\setup\setup.exe ...
+Configuring distributive-0.5.0.2...
+Building distributive-0.5.0.2...
+Preprocessing library distributive-0.5.0.2...
+[1 of 2] Compiling Data.Distributive.Generic ( src\Data\Distributive\Generic.hs, .stack-work\dist\b7fec021\build\Data\Distributive\Generic.o )
+[2 of 2] Compiling Data.Distributive ( src\Data\Distributive.hs, .stack-work\dist\b7fec021\build\Data\Distributive.o )
+[1 of 2] Compiling Data.Distributive.Generic ( src\Data\Distributive\Generic.hs, .stack-work\dist\b7fec021\build\Data\Distributive\Generic.p_o )
+[2 of 2] Compiling Data.Distributive ( src\Data\Distributive.hs, .stack-work\dist\b7fec021\build\Data\Distributive.p_o )
+Installing library in
+C:\Users\PCUser\AppData\Roaming\stack\snapshots\a2932497\lib\x86_64-windows-ghc-8.0.1\distributive-0.5.0.2-Cdz2vLOk85j1doGXLcictT
+Registering distributive-0.5.0.2...

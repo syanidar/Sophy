@@ -1,0 +1,1225 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-17 14:57:32.8758198 UTC
+
+interface Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet:Move 8001
+  interface hash: d1b3c4e679f76eac3cc05282d923c3fb
+  ABI hash: 44a778e409d712d8dcaf2c07d1b2800d
+  export-list hash: c971bac89379bbc97981f28ed121b754
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 780eb08866e9f611cfa38104f3e4c47c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Move.getFromSquare
+  Move.getMoveType
+  Move.getPromotionPiece
+  Move.getToSquare
+  Move.isCapture
+  Move.isCheck
+  Move.isQuiet
+  Move.isTactical
+  Move.legalMoves
+  Move.legalPositions
+  Move.makeMove
+  Move.materialGain
+  Move.noisyMoves
+  Move.notSuicidal
+  Move.nullMove
+  Move.pass
+  Move.play
+  Move.see
+  Move.toLAN
+  Move.winningCaptures
+module dependencies: Alias AttackTable BasicConstant BasicData
+                     BitBoard Bitwise Position
+package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-CJpWsiXJdd89SnV9dZtTwc
+                      Win32-2.3.1.1@Win32-2.3.1.1
+                      adjunctions-4.3@adjunctions-4.3-3ol9sWZt3In19pwXwPv3Xc
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      base-orphans-0.5.4@base-orphans-0.5.4-5IQvrjd7gNP548VkOOyIq6
+                      bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      comonad-5@comonad-5-2RMxpSOQ5MCHLHIelJrHD4
+                      composition-1.0.2.1@composition-1.0.2.1-KZVQ5Se9KseC7kQ38aLGDn
+                      containers-0.5.7.1@containers-0.5.7.1
+                      contravariant-1.4@contravariant-1.4-KSQE31a7FruKHDlp90hIUT
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      distributive-0.5.0.2@distributive-0.5.0.2-Cdz2vLOk85j1doGXLcictT
+                      exceptions-0.8.3@exceptions-0.8.3-7py7fmRxowDFpHmiHGKrTb
+                      free-4.12.4@free-4.12.4-Etm59Dm8iExFxAy1L49Ovd
+                      ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
+                      hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G
+                      integer-gmp-1.0.0.1
+                      kan-extensions-5.0.1@kan-extensions-5.0.1-Asa0tkk9PuPLZ2eXuJ10Gr
+                      lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA
+                      mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      prelude-extras-0.4.0.3@prelude-extras-0.4.0.3-FAyB4iuuM7cHXdrLMZtdXq
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      profunctors-5.2@profunctors-5.2-2ZZOz6u59T2H8y7z3NgZkY
+                      random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe
+                      reflection-2.1.2@reflection-2.1.2-J1ZzlxijzaHGRixYxgxlf9
+                      semigroupoids-5.1@semigroupoids-5.1-1Gay4xNO77GHd4DGCzVuax
+                      split-0.2.3.1@split-0.2.3.1-IJKK4pOCYGKud0jZImZke
+                      stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF
+                      tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
+                      template-haskell-2.11.0.0
+                      text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-81lZyuOJOvsD0zyCv2TKld
+                      unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW
+                      vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G:Data.Hashable.Generic
+         reflection-2.1.2@reflection-2.1.2-J1ZzlxijzaHGRixYxgxlf9:Data.Reflection
+         stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+family instance modules: adjunctions-4.3@adjunctions-4.3-3ol9sWZt3In19pwXwPv3Xc:Data.Functor.Rep
+                         base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.Functor.Product base-4.9.0.0:Data.Functor.Sum
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Biff
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Clown
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Flip
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Join
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Joker
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Product
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Sum
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Tannen
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Wrapped
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         kan-extensions-5.0.1@kan-extensions-5.0.1-Asa0tkk9PuPLZ2eXuJ10Gr:Data.Functor.Day
+                         kan-extensions-5.0.1@kan-extensions-5.0.1-Asa0tkk9PuPLZ2eXuJ10Gr:Data.Functor.Yoneda
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.At
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Internal.Indexed
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Reified
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Tuple
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Wrapped
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Zoom
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
+                         profunctors-5.2@profunctors-5.2-2ZZOz6u59T2H8y7z3NgZkY:Data.Profunctor.Rep
+                         tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+                         unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Base
+                         unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashSet
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
+import  -/  Alias ba36719cc8f68ab87c0ee8446a683f1b
+  exports: 03b73823d7379fa3fc65780b7c8ac5e2
+  From 0bfabb06e62eadab54a579839ae03531
+  Move 28ada285c0d62028b4226580e5f1ab97
+  PieceValue 4186039bec2d435a1f09ed24656c3b1c
+  Square 47e0dc39b5f004e762e108114ef07a8d
+  To 4442ddfcafc5bf9168b966fb6e1d0b26
+import  -/  AttackTable 9744fc5387b59a0a8607ff353b8c018d
+  exports: a05285a83ff207b32b71687481ff8ff3
+  bishopAttack 531b74aa1e19d1691ccf0bf87f569030
+  kingAttack 8de35413ae8cc94ecd930015876916a7
+  knightAttack 741f0fa16bbcd6bdf293a4bfcde44d6a
+  pawnAttack 640edbb37a2b657940c1503aa7fc6cab
+  pieceAttack 1556ec68e8924ec662d523833debe740
+  queenAttack cc35896ee64c05719fe4cdcf680db355
+  rookAttack c4bfccee42c8b39b38aaae826ba723f3
+import  -/  BasicConstant 75629955daea2dc6e28b1b47bb042933
+  exports: 8cd31e6e16b93cd2dcc5693171330c73
+  backrank 66828abbafea3c3bfaedf8bd69873f64
+import  -/  BasicData 2a7d7454833f4f04d9c30a40b6d5a151
+  exports: 05582099e9a48170ebc021a187a7905d
+  Bishop 42c313f81738f26581e31bd53cfbd397
+  Castling 7168baed45606106cdca8437c066e102
+  East 84c6f8d64c2298cc683386fe74425dc3
+  EnPassant 1f552e4dc3dc5f7be77cba7c81eb9f1a
+  King 2db3132eee6067b9d25bc0e1fc945cfa
+  Knight 461e5adbab338f7e2a030d9d47abe91e
+  MoveType 6ec8bb4a2d566f1e93a3d9d3f2980b78
+  Normal 7f6703ca04a00630a548a40a8cc4bf33
+  Pawn 1b02be8111f4c89ef250a784fb2986fe
+  PieceType d7f82d5957caceafc8b688a191800308
+  Position 682d610c9d78016fb58efbcec8bc1ded
+  Position a4a6ae1d21eb516f790aeadb42103ac1
+  Promotion 1959178192f644ee6ed6cb2c47972bb6
+  Queen 9934c7b69e70a8646bf6b75fda804ef3
+  Rook 86ec96c7cf9e9c94d4763e21a3c09b90
+  West 5ee0d14b791eceb8caf85a4bc986c483
+  _activeColor 445b499e540a4303831b0166931f68a2
+  _attackers f6a0ec5168d0bd061f1e7ebc903f5f17
+  _checkers 2bec81847b7309d4ff24a5ec96db960c
+  _defendMap 5f68ea0a2ebd91af5cbf3d06d07a526c
+  _defenders c89f714bc5316fdb2721de53e07a57d3
+  _pinnedByBishops 72bcb096fdb377aa10dfe6481e6c42e2
+  _pinnedByRooks ce9664f6e5272555221a0ec4e28c5c9f
+  activeColor 071921c133c539dfc0de6ff816d9e34b
+  attackers a9159f642c76c8edbd688d929e875f86
+  checkers 1a7e1ccd17cb24578188eae50a6db3ec
+  defendMap 03f4a8eb3251f8e297a2fe161b2fad6e
+  defenders ae34df689900fa6e4d0e7689e67c24dc
+  enPassantSquare df67d607ce3f9b804f018ccc8fe030d0
+  history cd2eb0a124afde32f5ecbe6c3c2aaaf6
+  pinnedByBishops b0b107e4c70cee430cb3bc936749768a
+  pinnedByRooks 4ba1bdbcbfe0f74ec552ce80b2d92177
+  plyCount 89e6ae44a85de21278080acc314226ce
+  queens 16ccf35b180935eb20ad3912066ccf9f
+  rooks 13a450071c19605777022e5d018e5920
+  zobristKey a343609122229b3a5de0a209162b4bf2
+import  -/  BitBoard 546ecb469d7a09f0dc9092f9430e44fc
+  exports: 581f8ad67b3ac061648269de5226c9ef
+  attack b2234ad6ebd2a1711de939c177d95eba
+  pawnAttack 97ddddd307d3bcadba801332ddb7f944
+  squareNameFrom 18ce553b2d72a3598c3e2c67b2621e1f
+import  -/  Bitwise dac3e64a54b8be9d7c8e1f130b8e73fa
+  exports: 9b4cf91b2dee21d2fcd203a2334d40a1
+  collapse 466736918cf20f0ebb026d98a12c7059
+  disjoint d4b6a06978fcf65d85a494a1597099df
+  joint d98fb2644b317d27b91085307d2a9706
+  ls1b ac3d5825744bf54fdf31bb0155e2b05e
+  populated 75e80f725612686eb7f81f1ce5359273
+  without 67ce45f5ed5d75206d3b7d6f09efeff7
+import  -/  Position af8b43b323818dabb635634fc880445d
+  exports: 0d659c33f0a366721f46836234c7b111
+  <!> 7322da29329a18c4544e3809c0df8bd0
+  <-!-> 91491b08e99be8d04a2f0ed9cebe626a
+  <~!~> 151cb5323a11ee050e50b6a3807af24b
+  activeCastleRight a76b95a035e004b94c58c40ae50f333f
+  arrangeEPSquare 6932affccfe74d72864ed6bf8ab84614
+  arrangeHalfMoveClock 3e842a92dd87f453ae0ae602422c4029
+  backward ec8d51fc67489cc884b706738dd5f5bb
+  backward2 f2287ef777c814cde8e8ff0f5cb44aa4
+  calcDefendMap fbe22dcaaa5a1629370cb28aeabf18a8
+  castle 9388be0fc3449fe69d8a31dd80c97e32
+  changeColor 8977e1441dc0dc713050cdf1f7bddf9e
+  disableCastling 9ffdaefdd68e08d84a3a092c2eef1966
+  disableEPSquare 5ef7b332ecb506f098a5f42369c363df
+  enPassant fdfdb5b6578c41b0193655e8d3db0b3a
+  findCheckers 6fd767fe79a5c1cc26c7ac42735a43e6
+  findPinners 2779b2099578848b244f92367ff9fb49
+  forward 0413f4f7145baa3c7675acf21ccbaa13
+  forward2 bf65c8b4b1298b1649f7efb8e93c097d
+  includeKingsideCastle 014c582f5694e79f270ee0e75b6c4459
+  includeQueensideCastle 7bb704c8b1b8839066b925fed9c6e2e1
+  isInCheck f23bea5a9021001de293e8b6302cc85c
+  isOccupied 64b30b09b91e5367c5a2b66e6831efbd
+  isWhite 105d25cf601ec514e78d347a5c5a0d36
+  material 181bf7d143ed301c6c23ac5f987ad2a5
+  move 9b790811e74e341032255dd981fb6c0d
+  occupancy eb22049dbafacf872fcec58cd372f33f
+  opposite db360e9035ecd51b3b7c88585c0dd71e
+  overAttacker 8244dc02c50ffb671d439fe03085d1c2
+  overDefender 3214a28494861cdaf6e2b36bbde8480b
+  pieceAt 39c7e67f43c7d0a5daef4df60d2f093b
+  pieceChar 3730815457b8f28c630d23e5a4d1ddd1
+  promotion d5efc6080669d6183f6400033ac12a22
+import  -/  base-4.9.0.0:Control.Monad b6b2f076948b5e8acd6d95beb4d22bfc
+import  -/  base-4.9.0.0:Data.Bits c954f6297e2203ba924b7d4bb91aa2cf
+import  -/  base-4.9.0.0:Data.Char 793b969914b1622fef8ab278ed0a2b7f
+import  -/  base-4.9.0.0:Data.Foldable 3cbed01c922be29649c33015287c82ca
+import  -/  base-4.9.0.0:Data.Function 2d30bad1e59b32e49b27f71226717080
+import  -/  base-4.9.0.0:Data.Functor 67cebb006c069ea73adcd2d468cdb0dc
+import  -/  base-4.9.0.0:Data.List d711f98b49ef5d33e5b3d404631ed073
+import  -/  base-4.9.0.0:Data.Maybe 086a84053ef7f7810663b5f03b7ec3f7
+import  -/  base-4.9.0.0:Data.OldList 3c899c6d8e6204063769214449ac0954
+import  -/  base-4.9.0.0:GHC.Base dd8044a8d640eee51828c17c476a6ba7
+import  -/  base-4.9.0.0:GHC.Enum dab7089478c738f0ffbf72212d9113c9
+import  -/  base-4.9.0.0:GHC.Err 20faef8829fd13c027d0ee2213637534
+import  -/  base-4.9.0.0:GHC.List 47d436dfb7454bb1883fb4d943e3f389
+import  -/  base-4.9.0.0:GHC.Num f0aed3315b3ed1b330b71fc4148a5581
+import  -/  base-4.9.0.0:GHC.Real 011de9ca3282ad24a84e4e15f974f98e
+import  -/  base-4.9.0.0:GHC.Unicode 01f7a6469be023f2c0f9e458d1a0270d
+import  -/  base-4.9.0.0:Prelude 2d9cd8b0ec3d728f62b734df888d2e34
+import  -/  composition-1.0.2.1@composition-1.0.2.1-KZVQ5Se9KseC7kQ38aLGDn:Data.Composition 277e45277a1ccd458458914c9cb45808
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+import  -/  lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens b7b80d679f99639b22dc49438349ebe7
+import  -/  lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Getter b4cdad12f267d5ddf6313c85279297ed
+import  -/  lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Setter 5dd87d764c6c78a841d6cc4f4c0b1fef
+import  -/  lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Tuple 5b3b634a957ffe56c46aa84a6648b7bb
+d19813b7ad1a4f1c75e30361201e09f4
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Move.$trModule2 Move.$trModule1) -}
+570a9710f0fa1f17c197ff8552cfc5ec
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Move"#) -}
+d8ef94898aebd90e70612a5e3c7da30d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet"#) -}
+3ba7c9bc8b4ab6110d9bae7a8350fd07
+  $w$j ::
+    GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> BasicData.Color
+    -> BasicData.CastleRight
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Word#
+    -> [Alias.ZobristKey]
+    -> BasicData.Position
+  {- Arity: 16,
+     Strictness: <S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,1*U><L,U><S,U><S,U><S,U><S,U><S,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ (w :: GHC.Prim.Word#)[OneShot]
+                   (w1 :: GHC.Prim.Word#)[OneShot]
+                   (w2 :: GHC.Prim.Word#)[OneShot]
+                   (w3 :: GHC.Prim.Word#)[OneShot]
+                   (w4 :: GHC.Prim.Word#)[OneShot]
+                   (w5 :: GHC.Prim.Word#)[OneShot]
+                   (w6 :: GHC.Prim.Word#)[OneShot]
+                   (w7 :: GHC.Prim.Word#)[OneShot]
+                   (w8 :: BasicData.Color)[OneShot]
+                   (w9 :: BasicData.CastleRight)[OneShot]
+                   (w10 :: GHC.Prim.Int#)[OneShot]
+                   (w11 :: GHC.Prim.Int#)[OneShot]
+                   (w12 :: GHC.Prim.Int#)[OneShot]
+                   (w13 :: GHC.Prim.Int#)[OneShot]
+                   (w14 :: GHC.Prim.Word#)[OneShot]
+                   (w15 :: [Alias.ZobristKey])[OneShot] ->
+                 case case w8 of wild1 {
+                        BasicData.White -> BasicData.Black
+                        BasicData.Black -> BasicData.White } of dt17 { DEFAULT ->
+                 case Position.colorHashKey of wild1 { GHC.Word.W64# x# ->
+                 case Position.$wfindCheckers
+                        w1
+                        w
+                        w2
+                        w3
+                        w4
+                        w5
+                        w6
+                        w7
+                        dt17 of ww21 { DEFAULT ->
+                 case Position.$wfindPinners
+                        w1
+                        w
+                        w4
+                        w5
+                        w6
+                        w7 of ww1 { (#,#) ww22 ww23 ->
+                 case ww22 of dt1 { GHC.Word.W64# dt18 ->
+                 case ww23 of dt2 { GHC.Word.W64# dt3 ->
+                 case Position.$wcalcDefendMap
+                        w1
+                        w
+                        w2
+                        w3
+                        w4
+                        w5
+                        w6
+                        w7
+                        dt17 of ww2 { DEFAULT ->
+                 BasicData.Position
+                   w1
+                   w
+                   w2
+                   w3
+                   w4
+                   w5
+                   w6
+                   w7
+                   dt17
+                   w9
+                   w10
+                   w11
+                   w12
+                   ww21
+                   dt3
+                   dt18
+                   ww2
+                   w13
+                   (GHC.Prim.xor# x# w14)
+                   w15 } } } } } } }) -}
+9b234dfd2ba027fb5383a6e20bdf2e30
+  $wgetMoveType :: GHC.Prim.Word# -> BasicData.MoveType
+  {- Arity: 1, Strictness: <S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Word#) ->
+                 let {
+                   ww1 :: GHC.Prim.Int# = GHC.Prim.word2Int# (GHC.Prim.and# ww 3##)
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww1 0#) of wild {
+                   GHC.Types.False -> BasicData.$fEnumMoveType5 ww1
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww1 3#) of wild1 {
+                        GHC.Types.False -> BasicData.$fEnumMoveType5 ww1
+                        GHC.Types.True
+                        -> GHC.Prim.tagToEnum# @ BasicData.MoveType ww1 } }) -}
+4cbac1c28a3d4ba054592e2df06a0349
+  $wgetPromotionPiece :: GHC.Prim.Word# -> BasicData.PieceType
+  {- Arity: 1, Strictness: <S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Word#) ->
+                 let {
+                   ww1 :: GHC.Prim.Int#
+                   = GHC.Prim.word2Int#
+                       (GHC.Prim.narrow16Word#
+                          (GHC.Prim.plusWord#
+                             (GHC.Prim.uncheckedShiftRL# (GHC.Prim.and# ww 12##) 2#)
+                             1##))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww1 0#) of wild {
+                   GHC.Types.False -> BasicData.$fEnumPieceType7 ww1
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww1 5#) of wild1 {
+                        GHC.Types.False -> BasicData.$fEnumPieceType7 ww1
+                        GHC.Types.True
+                        -> GHC.Prim.tagToEnum# @ BasicData.PieceType ww1 } }) -}
+f35580db6364fcac2321404d412b2586
+  $wisCapture ::
+    BasicData.Position -> GHC.Prim.Word# -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <L,1*U(U,U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (w :: BasicData.Position) (ww :: GHC.Prim.Word#) ->
+                 let {
+                   ww1 :: GHC.Prim.Int# = GHC.Prim.word2Int# (GHC.Prim.and# ww 3##)
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww1 0#) of wild {
+                   GHC.Types.False
+                   -> case BasicData.$fEnumMoveType5 ww1 ret_ty GHC.Types.Bool of {}
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww1 3#) of wild1 {
+                        GHC.Types.False
+                        -> case BasicData.$fEnumMoveType5 ww1 ret_ty GHC.Types.Bool of {}
+                        GHC.Types.True
+                        -> case GHC.Prim.tagToEnum# @ BasicData.MoveType ww1 of wild2 {
+                             DEFAULT
+                             -> case w of wild3 { BasicData.Position dt dt1 dt2 dt3 dt4 dt5 dt6 dt7 x9 x10 dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 x20 ->
+                                let {
+                                  i# :: GHC.Prim.Int#
+                                  = GHC.Prim.word2Int#
+                                      (GHC.Prim.uncheckedShiftRL# (GHC.Prim.and# ww 1008##) 4#)
+                                } in
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.>=# i# 64#) of wild4 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.and#
+                                            (GHC.Prim.or# dt dt1)
+                                            (GHC.Prim.uncheckedShiftL# 1## i#) of wild5 {
+                                       DEFAULT -> GHC.Types.True 0## -> GHC.Types.False }
+                                  GHC.Types.True -> GHC.Types.False } }
+                             BasicData.EnPassant -> GHC.Types.True } } }) -}
+96a5c269302ec20575e8607f502fdde7
+  $wisCheck ::
+    GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> BasicData.Color
+    -> GHC.Prim.Word#
+    -> GHC.Types.Bool
+  {- Arity: 10,
+     Strictness: <L,U><S,U><S,U><L,U><L,U><L,U><L,U><S,U><L,U><S,U>,
+     Inline: [0] -}
+2cd3833bc29e2248328ba3928c71db9b
+  $wisQuiet :: BasicData.Position -> GHC.Prim.Word# -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <L,1*U(U,U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (w :: BasicData.Position) (ww :: GHC.Prim.Word#) ->
+                 let {
+                   ww1 :: GHC.Prim.Int# = GHC.Prim.word2Int# (GHC.Prim.and# ww 3##)
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww1 0#) of wild {
+                   GHC.Types.False
+                   -> case BasicData.$fEnumMoveType5 ww1 ret_ty GHC.Types.Bool of {}
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww1 3#) of wild1 {
+                        GHC.Types.False
+                        -> case BasicData.$fEnumMoveType5 ww1 ret_ty GHC.Types.Bool of {}
+                        GHC.Types.True
+                        -> case GHC.Prim.tagToEnum# @ BasicData.MoveType ww1 of wild2 {
+                             BasicData.Normal
+                             -> case w of wild3 { BasicData.Position dt dt1 dt2 dt3 dt4 dt5 dt6 dt7 x9 x10 dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 x20 ->
+                                let {
+                                  i# :: GHC.Prim.Int#
+                                  = GHC.Prim.word2Int#
+                                      (GHC.Prim.uncheckedShiftRL# (GHC.Prim.and# ww 1008##) 4#)
+                                } in
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.>=# i# 64#) of wild4 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.and#
+                                            (GHC.Prim.or# dt dt1)
+                                            (GHC.Prim.uncheckedShiftL# 1## i#) of wild5 {
+                                       DEFAULT -> GHC.Types.False 0## -> GHC.Types.True }
+                                  GHC.Types.True -> GHC.Types.True } }
+                             BasicData.EnPassant -> GHC.Types.False
+                             BasicData.Castling
+                             -> case w of wild3 { BasicData.Position dt dt1 dt2 dt3 dt4 dt5 dt6 dt7 x9 x10 dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 x20 ->
+                                let {
+                                  i# :: GHC.Prim.Int#
+                                  = GHC.Prim.word2Int#
+                                      (GHC.Prim.uncheckedShiftRL# (GHC.Prim.and# ww 1008##) 4#)
+                                } in
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.>=# i# 64#) of wild4 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.and#
+                                            (GHC.Prim.or# dt dt1)
+                                            (GHC.Prim.uncheckedShiftL# 1## i#) of wild5 {
+                                       DEFAULT -> GHC.Types.False 0## -> GHC.Types.True }
+                                  GHC.Types.True -> GHC.Types.True } }
+                             BasicData.Promotion -> GHC.Types.False } } }) -}
+2acf0994efb235126ff6a37a38495001
+  $wmakeMove ::
+    GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> BasicData.Color
+    -> BasicData.CastleRight
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Word#
+    -> [Alias.ZobristKey]
+    -> BasicData.Position
+  {- Arity: 21,
+     Strictness: <S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U>,
+     Inline: [0] -}
+17e651544ff54d25319959319f7a4230
+  $wmaterialGain ::
+    BasicData.Position -> GHC.Prim.Word# -> GHC.Prim.Int#
+  {- Arity: 2,
+     Strictness: <L,U(A,A,U,U,U,U,U,U,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (w :: BasicData.Position) (ww :: GHC.Prim.Word#) ->
+                 let {
+                   ww1 :: GHC.Prim.Int# = GHC.Prim.word2Int# (GHC.Prim.and# ww 3##)
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww1 0#) of wild {
+                   GHC.Types.False
+                   -> case BasicData.$fEnumMoveType5 ww1 ret_ty GHC.Prim.Int# of {}
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww1 3#) of wild1 {
+                        GHC.Types.False
+                        -> case BasicData.$fEnumMoveType5 ww1 ret_ty GHC.Prim.Int# of {}
+                        GHC.Types.True
+                        -> case GHC.Prim.tagToEnum# @ BasicData.MoveType ww1 of wild2 {
+                             DEFAULT
+                             -> let {
+                                  i# :: GHC.Prim.Int#
+                                  = GHC.Prim.word2Int#
+                                      (GHC.Prim.uncheckedShiftRL# (GHC.Prim.and# ww 1008##) 4#)
+                                } in
+                                let {
+                                  $w$j1 :: GHC.Prim.Int# -> GHC.Prim.Int#
+                                    {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                                  = \ (w1 :: GHC.Prim.Int#)[OneShot] ->
+                                    let {
+                                      i#1 :: GHC.Prim.Int#
+                                      = GHC.Prim.word2Int#
+                                          (GHC.Prim.uncheckedShiftRL#
+                                             (GHC.Prim.and# ww 64512##)
+                                             10#)
+                                    } in
+                                    case GHC.Prim.tagToEnum#
+                                           @ GHC.Types.Bool
+                                           (GHC.Prim.>=# i#1 64#) of wild3 {
+                                      GHC.Types.False
+                                      -> case w of ww2 { BasicData.Position ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ww19 ww20 ww21 ww22 ->
+                                         let {
+                                           ww23 :: GHC.Prim.Word#
+                                           = GHC.Prim.uncheckedShiftL# 1## i#1
+                                         } in
+                                         case GHC.Prim.and# ww23 ww5 of wild4 {
+                                           DEFAULT -> GHC.Prim.-# w1 100#
+                                           0##
+                                           -> case GHC.Prim.and# ww23 ww6 of wild5 {
+                                                DEFAULT -> GHC.Prim.-# w1 320#
+                                                0##
+                                                -> case GHC.Prim.and# ww23 ww7 of wild6 {
+                                                     DEFAULT -> GHC.Prim.-# w1 330#
+                                                     0##
+                                                     -> case GHC.Prim.and# ww23 ww8 of wild7 {
+                                                          DEFAULT -> GHC.Prim.-# w1 500#
+                                                          0##
+                                                          -> case GHC.Prim.and# ww23 ww9 of wild8 {
+                                                               DEFAULT -> GHC.Prim.-# w1 900#
+                                                               0##
+                                                               -> case GHC.Prim.and#
+                                                                         ww23
+                                                                         ww10 of wild9 {
+                                                                    DEFAULT -> GHC.Prim.-# w1 20000#
+                                                                    0##
+                                                                    -> case Move.materialGain1
+                                                                       ret_ty GHC.Prim.Int#
+                                                                       of {} } } } } } } }
+                                      GHC.Types.True
+                                      -> case Move.materialGain1 ret_ty GHC.Prim.Int# of {} }
+                                } in
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.>=# i# 64#) of wild3 {
+                                  GHC.Types.False
+                                  -> case w of ww2 { BasicData.Position ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ww19 ww20 ww21 ww22 ->
+                                     let {
+                                       ww23 :: GHC.Prim.Word# = GHC.Prim.uncheckedShiftL# 1## i#
+                                     } in
+                                     case GHC.Prim.and# ww23 ww5 of wild4 {
+                                       DEFAULT -> $w$j1 100#
+                                       0##
+                                       -> case GHC.Prim.and# ww23 ww6 of wild5 {
+                                            DEFAULT -> $w$j1 320#
+                                            0##
+                                            -> case GHC.Prim.and# ww23 ww7 of wild6 {
+                                                 DEFAULT -> $w$j1 330#
+                                                 0##
+                                                 -> case GHC.Prim.and# ww23 ww8 of wild7 {
+                                                      DEFAULT -> $w$j1 500#
+                                                      0##
+                                                      -> case GHC.Prim.and# ww23 ww9 of wild8 {
+                                                           DEFAULT -> $w$j1 900#
+                                                           0##
+                                                           -> case GHC.Prim.and#
+                                                                     ww23
+                                                                     ww10 of wild9 {
+                                                                DEFAULT -> $w$j1 20000#
+                                                                0## -> $w$j1 0# } } } } } } }
+                                  GHC.Types.True
+                                  -> case w of ww2 { BasicData.Position ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ww19 ww20 ww21 ww22 ->
+                                     $w$j1 0# } }
+                             BasicData.EnPassant -> 0# } } }) -}
+4310672e7e872d492d0d89d0605e5faf
+  $wmoves ::
+    BasicData.Position
+    -> (# [Alias.Move], [Alias.Move], [Alias.Move] #)
+  {- Arity: 1,
+     Strictness: <L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,A)>,
+     Inline: [0] -}
+9e20222a7910f82607d5525cca9942fe
+  $wnotSuicidal ::
+    GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> BasicData.Color
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Types.Bool
+  {- Arity: 14,
+     Strictness: <L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><S,U><S,U><L,U><L,U><L,U><S,U>,
+     Inline: [0] -}
+3eb690bdf421f1dc533d5c0d72347627
+  $wpass ::
+    GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> BasicData.Color
+    -> BasicData.CastleRight
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Word#
+    -> [Alias.ZobristKey]
+    -> BasicData.Position
+  {- Arity: 20,
+     Strictness: <S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,1*U><S,U><S,U><S,1*U><S,1*U><S,1*U><S,1*U><S,U><S,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Word#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Word#)
+                   (ww4 :: GHC.Prim.Word#)
+                   (ww5 :: GHC.Prim.Word#)
+                   (ww6 :: GHC.Prim.Word#)
+                   (ww7 :: GHC.Prim.Word#)
+                   (ww8 :: BasicData.Color)
+                   (ww9 :: BasicData.CastleRight)
+                   (ww10 :: GHC.Prim.Int#)
+                   (ww11 :: GHC.Prim.Int#)
+                   (ww12 :: GHC.Prim.Int#)
+                   (ww13 :: GHC.Prim.Word#)
+                   (ww14 :: GHC.Prim.Word#)
+                   (ww15 :: GHC.Prim.Word#)
+                   (ww16 :: GHC.Prim.Word#)
+                   (ww17 :: GHC.Prim.Int#)
+                   (ww18 :: GHC.Prim.Word#)
+                   (ww19 :: [Alias.ZobristKey]) ->
+                 case ww10 of wild {
+                   DEFAULT
+                   -> let {
+                        x :: GHC.Prim.Int# = GHC.Prim.remInt# wild 8#
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 0#) of wild1 {
+                        GHC.Types.False
+                        -> case Position.calcHashKey17 of wild2 { GHC.Types.I# n# ->
+                           case Position.calcHashKey21 n# x ret_ty BasicData.Position of {} }
+                        GHC.Types.True
+                        -> case Position.calcHashKey17 of wild2 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<# x y) of wild3 {
+                             GHC.Types.False
+                             -> case Position.calcHashKey21 y x ret_ty BasicData.Position of {}
+                             GHC.Types.True
+                             -> case Position.calcHashKey1
+                                       `cast`
+                                     (Trans
+                                          (Data.Vector.Unboxed.Base.D:R:VectorWord640[0])
+                                          (Data.Vector.Unboxed.Base.N:R:VectorWord64[0])) of wild4 { Data.Vector.Primitive.Vector dt dt1 dt2 ->
+                                case GHC.Prim.indexWord64Array#
+                                       dt2
+                                       (GHC.Prim.+# dt x) of wild5 { DEFAULT ->
+                                Move.$w$j
+                                  ww
+                                  ww1
+                                  ww2
+                                  ww3
+                                  ww4
+                                  ww5
+                                  ww6
+                                  ww7
+                                  ww8
+                                  ww9
+                                  0#
+                                  ww11
+                                  ww12
+                                  ww17
+                                  (GHC.Prim.xor# wild5 ww18)
+                                  ww19 } } } } }
+                   0#
+                   -> Move.$w$j
+                        ww
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        ww5
+                        ww6
+                        ww7
+                        ww8
+                        ww9
+                        0#
+                        ww11
+                        ww12
+                        ww17
+                        ww18
+                        ww19 }) -}
+c6bb6b12cd82ed0c4a62722663a63fe6
+  $wsee ::
+    GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> BasicData.Color
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+  {- Arity: 19,
+     Strictness: <S,U><L,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,U><S,U>,
+     Inline: [0] -}
+48f002973642f5d45c002360aa227c1b
+  $wtoLAN :: GHC.Prim.Word# -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Word#) ->
+                 case ww of wild {
+                   DEFAULT
+                   -> let {
+                        i# :: GHC.Prim.Int#
+                        = GHC.Prim.word2Int#
+                            (GHC.Prim.uncheckedShiftRL# (GHC.Prim.and# wild 64512##) 10#)
+                      } in
+                      let {
+                        n :: [GHC.Types.Char]
+                        = let {
+                            i#1 :: GHC.Prim.Int#
+                            = GHC.Prim.word2Int#
+                                (GHC.Prim.uncheckedShiftRL# (GHC.Prim.and# wild 1008##) 4#)
+                          } in
+                          let {
+                            ww1 :: GHC.Prim.Int# = GHC.Prim.word2Int# (GHC.Prim.and# wild 3##)
+                          } in
+                          let {
+                            n1 :: [GHC.Types.Char]
+                            = case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# ww1 0#) of wild1 {
+                                GHC.Types.False
+                                -> case BasicData.$fEnumMoveType5 ww1 ret_ty [GHC.Types.Char] of {}
+                                GHC.Types.True
+                                -> case GHC.Prim.tagToEnum#
+                                          @ GHC.Types.Bool
+                                          (GHC.Prim.<=# ww1 3#) of wild2 {
+                                     GHC.Types.False
+                                     -> case BasicData.$fEnumMoveType5 ww1
+                                        ret_ty [GHC.Types.Char]
+                                        of {}
+                                     GHC.Types.True
+                                     -> case GHC.Prim.tagToEnum# @ BasicData.MoveType ww1 of wild3 {
+                                          DEFAULT -> GHC.Types.[] @ GHC.Types.Char
+                                          BasicData.Promotion
+                                          -> GHC.Types.:
+                                               @ GHC.Types.Char
+                                               (let {
+                                                  ww2 :: GHC.Prim.Int#
+                                                  = GHC.Prim.word2Int#
+                                                      (GHC.Prim.narrow16Word#
+                                                         (GHC.Prim.plusWord#
+                                                            (GHC.Prim.uncheckedShiftRL#
+                                                               (GHC.Prim.and# wild 12##)
+                                                               2#)
+                                                            1##))
+                                                } in
+                                                case GHC.Prim.tagToEnum#
+                                                       @ GHC.Types.Bool
+                                                       (GHC.Prim.>=# ww2 0#) of wild4 {
+                                                  GHC.Types.False
+                                                  -> case BasicData.$fEnumPieceType7 ww2
+                                                     ret_ty GHC.Types.Char
+                                                     of {}
+                                                  GHC.Types.True
+                                                  -> case GHC.Prim.tagToEnum#
+                                                            @ GHC.Types.Bool
+                                                            (GHC.Prim.<=# ww2 5#) of wild5 {
+                                                       GHC.Types.False
+                                                       -> case BasicData.$fEnumPieceType7 ww2
+                                                          ret_ty GHC.Types.Char
+                                                          of {}
+                                                       GHC.Types.True
+                                                       -> case GHC.Prim.tagToEnum#
+                                                                 @ BasicData.PieceType
+                                                                 ww2 of wild6 {
+                                                            BasicData.Pawn -> Position.pieceChar6
+                                                            BasicData.Knight -> Position.pieceChar5
+                                                            BasicData.Bishop -> Position.pieceChar4
+                                                            BasicData.Rook -> Position.pieceChar3
+                                                            BasicData.Queen -> Position.pieceChar2
+                                                            BasicData.King
+                                                            -> Position.pieceChar1 } } })
+                                               (GHC.Types.[] @ GHC.Types.Char) } } }
+                          } in
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.>=# i#1 64#) of wild2 {
+                            GHC.Types.False
+                            -> case BitBoard.$wsquareNameFrom
+                                      (GHC.Prim.uncheckedShiftL# 1## i#1) of ww2 { (#,#) ww3 ww4 ->
+                               GHC.Base.++
+                                 @ GHC.Types.Char
+                                 (GHC.Types.: @ GHC.Types.Char ww3 ww4)
+                                 n1 }
+                            GHC.Types.True
+                            -> case BitBoard.$wsquareNameFrom 0## of ww2 { (#,#) ww3 ww4 ->
+                               GHC.Base.++
+                                 @ GHC.Types.Char
+                                 (GHC.Types.: @ GHC.Types.Char ww3 ww4)
+                                 n1 } }
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# i# 64#) of wild2 {
+                        GHC.Types.False
+                        -> case BitBoard.$wsquareNameFrom
+                                  (GHC.Prim.uncheckedShiftL# 1## i#) of ww2 { (#,#) ww3 ww4 ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             (GHC.Types.: @ GHC.Types.Char ww3 ww4)
+                             n }
+                        GHC.Types.True
+                        -> case BitBoard.$wsquareNameFrom 0## of ww2 { (#,#) ww3 ww4 ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             (GHC.Types.: @ GHC.Types.Char ww3 ww4)
+                             n } }
+                   0## -> Move.play1 }) -}
+55f7ffb2090e516614745d404212ef47
+  getFromSquare :: Alias.Move -> Alias.Square
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Alias.Move) ->
+                 case x of wild { GHC.Word.W16# x# ->
+                 GHC.Types.I#
+                   (GHC.Prim.word2Int#
+                      (GHC.Prim.uncheckedShiftRL# (GHC.Prim.and# x# 64512##) 10#)) }) -}
+4eb02a7231037e173579a17d65533a8c
+  getMoveType :: Alias.Move -> BasicData.MoveType
+  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Alias.Move) ->
+                 case w of ww { GHC.Word.W16# ww1 -> Move.$wgetMoveType ww1 }) -}
+537e2774ad50c73be06df980bc7934b4
+  getPromotionPiece :: Alias.Move -> BasicData.PieceType
+  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Alias.Move) ->
+                 case w of ww { GHC.Word.W16# ww1 ->
+                 Move.$wgetPromotionPiece ww1 }) -}
+914d40696b4a4710530f2b9df8f53dc7
+  getToSquare :: Alias.Move -> Alias.Square
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Alias.Move) ->
+                 case x of wild { GHC.Word.W16# x# ->
+                 GHC.Types.I#
+                   (GHC.Prim.word2Int#
+                      (GHC.Prim.uncheckedShiftRL# (GHC.Prim.and# x# 1008##) 4#)) }) -}
+21db16f03b8f2a2108203f6a1b5dcec4
+  isCapture :: BasicData.Position -> Alias.Move -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <L,1*U(U,U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S(S),1*U(U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: BasicData.Position) (w1 :: Alias.Move) ->
+                 case w1 of ww { GHC.Word.W16# ww1 -> Move.$wisCapture w ww1 }) -}
+376546f14ac6501994d7226a5b89376a
+  isCheck :: BasicData.Position -> Alias.Move -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <S(LSSLLLLSLLLLLLLLLLLL),U(U,U,U,U,U,U,U,U,U,A,A,A,A,A,A,A,A,A,A,A)><S(S),U(U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: BasicData.Position) (w1 :: Alias.Move) ->
+                 case w of ww { BasicData.Position ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ww19 ww20 ->
+                 case w1 of ww21 { GHC.Word.W16# ww22 ->
+                 Move.$wisCheck ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww22 } }) -}
+d2080fdebce11cedf2d7f7a66be8a092
+  isQuiet :: BasicData.Position -> Alias.Move -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <L,1*U(U,U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S(S),1*U(U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: BasicData.Position) (w1 :: Alias.Move) ->
+                 case w1 of ww { GHC.Word.W16# ww1 -> Move.$wisQuiet w ww1 }) -}
+2dafa972c9eac619046ebaf683a91d8d
+  isTactical :: BasicData.Position -> Alias.Move -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <L,1*U(U,U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S(S),1*U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: BasicData.Position) (y :: Alias.Move) ->
+                 case Move.isQuiet x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+f4398696a4e91057c69a0ee4e4024904
+  legalMoves :: BasicData.Position -> [Alias.Move]
+  {- Arity: 1,
+     Strictness: <L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: BasicData.Position) ->
+                 case Move.moves x of wild { (,,) a1 b2 c2 -> a1 }) -}
+43e326b4ba964f4d42eae113b9347e51
+  legalPositions :: BasicData.Position -> [BasicData.Position]
+  {- Arity: 1,
+     Strictness: <L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)>,
+     Unfolding: (\ (x :: BasicData.Position) ->
+                 case Move.$wmoves x of ww { (#,,#) ww1 ww2 ww3 ->
+                 GHC.Base.map
+                   @ GHC.Word.Word16
+                   @ BasicData.Position
+                   (\ (ds :: Alias.Move) -> Move.makeMove ds x)
+                   ww1 }) -}
+b10c71dbea286ede8bea4e8fc9f77a6b
+  makeMove :: Alias.Move -> BasicData.Position -> BasicData.Position
+  {- Arity: 2,
+     Strictness: <S(S),1*U(U)><S(SSSSSSSSSSSSSSSSSSSS),U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Alias.Move) (w1 :: BasicData.Position) ->
+                 case w of ww { GHC.Word.W16# ww1 ->
+                 case w1 of ww2 { BasicData.Position ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ww19 ww20 ww21 ww22 ->
+                 Move.$wmakeMove
+                   ww1
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww9
+                   ww10
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15
+                   ww16
+                   ww17
+                   ww18
+                   ww19
+                   ww20
+                   ww21
+                   ww22 } }) -}
+7369eb50cfca9202414e8f5372e02570
+  materialGain :: BasicData.Position -> Alias.Move -> GHC.Types.Int
+  {- Arity: 2,
+     Strictness: <L,U(A,A,U,U,U,U,U,U,A,A,A,A,A,A,A,A,A,A,A,A)><S(S),1*U(U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: BasicData.Position) (w1 :: Alias.Move) ->
+                 case w1 of ww { GHC.Word.W16# ww1 ->
+                 case Move.$wmaterialGain w ww1 of ww2 { DEFAULT ->
+                 GHC.Types.I# ww2 } }) -}
+c85daedb784a7bc7f5fde75773390fd3
+  materialGain1 :: BasicData.PieceType
+  {- Strictness: x -}
+91f74ddd2e011b68944098bd755ba268
+  moves ::
+    BasicData.Position -> ([Alias.Move], [Alias.Move], [Alias.Move])
+  {- Arity: 1,
+     Strictness: <L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,A)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: BasicData.Position) ->
+                 case Move.$wmoves w of ww { (#,,#) ww1 ww2 ww3 ->
+                 (ww1, ww2, ww3) }) -}
+e975411a384f2951ba13b83739c18375
+  noisyMoves :: BasicData.Position -> [Alias.Move]
+  {- Arity: 1,
+     Strictness: <L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: BasicData.Position) ->
+                 case Move.moves x of wild { (,,) a2 b2 c1 -> c1 }) -}
+b1eb4e381659cd3541c2e3f3f179f964
+  notSuicidal :: BasicData.Position -> Alias.Move -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <S(LLLLLLLLSLLLLSLLLLLL),1*U(U,U,U,U,U,U,U,U,U,A,A,A,A,U,U,U,U,A,A,A)><S(S),U(U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: BasicData.Position) (w1 :: Alias.Move) ->
+                 case w of ww { BasicData.Position ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ww19 ww20 ->
+                 case w1 of ww21 { GHC.Word.W16# ww22 ->
+                 Move.$wnotSuicidal
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww9
+                   ww14
+                   ww15
+                   ww16
+                   ww17
+                   ww22 } }) -}
+69b89e7f2a30b911e4821afc32dff6e0
+  nullMove :: Alias.Move
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Word.W16# 0##) -}
+c30a49ccbe5ffa66e2dc5a50cf13c3fc
+  pass :: BasicData.Position -> BasicData.Position
+  {- Arity: 1,
+     Strictness: <S(SSSSSSSSSSSSSSSSSSSS),1*U(U,U,U,U,U,U,U,U,U,U,1*U,U,U,1*U,1*U,1*U,1*U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: BasicData.Position) ->
+                 case w of ww { BasicData.Position ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ww19 ww20 ->
+                 Move.$wpass
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww9
+                   ww10
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15
+                   ww16
+                   ww17
+                   ww18
+                   ww19
+                   ww20 }) -}
+10884c96321a6835798bd28f8411bd55
+  play ::
+    GHC.Base.String
+    -> BasicData.Position -> GHC.Base.Maybe BasicData.Position
+  {- Arity: 2,
+     Strictness: <L,1*U><L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)>,
+     Unfolding: (\ (x :: GHC.Base.String) (y :: BasicData.Position) ->
+                 case Move.$wmoves y of ww { (#,,#) ww1 ww2 ww3 ->
+                 let {
+                   ds :: [GHC.Types.Char]
+                   = GHC.Base.map
+                       @ GHC.Types.Char
+                       @ GHC.Types.Char
+                       GHC.Unicode.toLower
+                       x
+                 } in
+                 letrec {
+                   go :: [Alias.Move] -> Data.Monoid.First Alias.Move
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds1 :: [Alias.Move]) ->
+                     case ds1 of wild {
+                       []
+                       -> (GHC.Base.Nothing @ Alias.Move)
+                            `cast`
+                          (Sym (Data.Monoid.N:First[0]) <Alias.Move>_N)
+                       : y1 ys
+                       -> case y1 of ww4 { GHC.Word.W16# ww5 ->
+                          case GHC.Base.eqString (Move.$wtoLAN ww5) ds of wild1 {
+                            GHC.Types.False -> go ys
+                            GHC.Types.True
+                            -> (GHC.Base.Just @ Alias.Move ww4)
+                                 `cast`
+                               (Sym (Data.Monoid.N:First[0]) <Alias.Move>_N) } } }
+                 } in
+                 case (go ww1)
+                        `cast`
+                      (Data.Monoid.N:First[0] <Alias.Move>_N) of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ BasicData.Position
+                   GHC.Base.Just x1
+                   -> GHC.Base.Just @ BasicData.Position (Move.makeMove x1 y) } }) -}
+95284329c18eda981e9ec7ceb156e2db
+  play1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "0000"#) -}
+9427147875830c353d6d934f121ab8fb
+  see :: BasicData.Position -> Alias.Move -> Alias.PieceValue
+  {- Arity: 2,
+     Strictness: <S(SLSSSSSSSLLLLLLLLLLL),1*U(U,U,U,U,U,U,U,U,U,A,1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U,U,A)><S(S),U(U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: BasicData.Position) (w1 :: Alias.Move) ->
+                 case w of ww { BasicData.Position ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ww19 ww20 ->
+                 case w1 of ww21 { GHC.Word.W16# ww22 ->
+                 case Move.$wsee
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        ww5
+                        ww6
+                        ww7
+                        ww8
+                        ww9
+                        ww11
+                        ww12
+                        ww13
+                        ww14
+                        ww15
+                        ww16
+                        ww17
+                        ww18
+                        ww19
+                        ww22 of ww23 { DEFAULT ->
+                 GHC.Types.I# ww23 } } }) -}
+9e6b618b23ec6e81887841cb543ee7fd
+  toLAN :: Alias.Move -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(S),1*U(1*U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Alias.Move) ->
+                 case w of ww { GHC.Word.W16# ww1 -> Move.$wtoLAN ww1 }) -}
+0ccb299ef74212861dd3b986470a69dd
+  winningCaptures :: BasicData.Position -> [Alias.Move]
+  {- Arity: 1,
+     Strictness: <L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: BasicData.Position) ->
+                 case Move.moves x of wild { (,,) a2 b1 c2 -> b1 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

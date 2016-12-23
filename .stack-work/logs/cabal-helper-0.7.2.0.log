@@ -1,0 +1,31 @@
+[1 of 1] Compiling Main             ( C:\Users\PCUser\AppData\Local\Temp\stack7304\cabal-helper-0.7.2.0\Setup.hs, C:\Users\PCUser\AppData\Local\Temp\stack7304\cabal-helper-0.7.2.0\.stack-work\dist\b7fec021\setup\Main.o )
+Linking C:\Users\PCUser\AppData\Local\Temp\stack7304\cabal-helper-0.7.2.0\.stack-work\dist\b7fec021\setup\setup.exe ...
+Configuring cabal-helper-0.7.2.0...
+Building cabal-helper-0.7.2.0...
+Preprocessing library cabal-helper-0.7.2.0...
+[1 of 4] Compiling CabalHelper.Sandbox ( CabalHelper\Sandbox.hs, .stack-work\dist\b7fec021\build\CabalHelper\Sandbox.o )
+[2 of 4] Compiling CabalHelper.Types ( CabalHelper\Types.hs, .stack-work\dist\b7fec021\build\CabalHelper\Types.o )
+[3 of 4] Compiling Paths_cabal_helper ( .stack-work\dist\b7fec021\build\autogen\Paths_cabal_helper.hs, .stack-work\dist\b7fec021\build\Paths_cabal_helper.o )
+[4 of 4] Compiling Distribution.Helper ( Distribution\Helper.hs, .stack-work\dist\b7fec021\build\Distribution\Helper.o )
+Preprocessing executable 'cabal-helper-wrapper-v0.7' for
+cabal-helper-0.7.2.0...
+[1 of 9] Compiling CabalHelper.Data ( CabalHelper\Data.hs, .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7-tmp\CabalHelper\Data.o )
+[2 of 9] Compiling CabalHelper.GuessGhc ( CabalHelper\GuessGhc.hs, .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7-tmp\CabalHelper\GuessGhc.o )
+[3 of 9] Compiling CabalHelper.Common ( CabalHelper\Common.hs, .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7-tmp\CabalHelper\Common.o )
+[4 of 9] Compiling CabalHelper.Sandbox ( CabalHelper\Sandbox.hs, .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7-tmp\CabalHelper\Sandbox.o )
+[5 of 9] Compiling CabalHelper.Types ( CabalHelper\Types.hs, .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7-tmp\CabalHelper\Types.o )
+[6 of 9] Compiling CabalHelper.Log  ( CabalHelper\Log.hs, .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7-tmp\CabalHelper\Log.o )
+[7 of 9] Compiling Paths_cabal_helper ( .stack-work\dist\b7fec021\build\autogen\Paths_cabal_helper.hs, .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7-tmp\Paths_cabal_helper.o )
+[8 of 9] Compiling CabalHelper.Compile ( CabalHelper\Compile.hs, .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7-tmp\CabalHelper\Compile.o )
+[9 of 9] Compiling Main             ( CabalHelper\Wrapper.hs, .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7-tmp\Main.o )
+[7 of 9] Compiling CabalHelper.Data ( CabalHelper\Data.hs, .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7-tmp\CabalHelper\Data.o )
+Linking .stack-work\dist\b7fec021\build\cabal-helper-wrapper-v0.7\cabal-helper-wrapper-v0.7.exe ...
+extended "cabal-helper-wrapper-v0.7"
+Installing executable(s) in
+C:\Users\PCUser\AppData\Roaming\stack\snapshots\a2932497\libexec
+Warning: The directory
+C:\Users\PCUser\AppData\Roaming\stack\snapshots\a2932497\libexec is not in the
+system search path.
+Installing library in
+C:\Users\PCUser\AppData\Roaming\stack\snapshots\a2932497\lib\x86_64-windows-ghc-8.0.1\cabal-helper-0.7.2.0-FuFHXtO4IBW2Q99yHinzj1
+Registering cabal-helper-0.7.2.0...

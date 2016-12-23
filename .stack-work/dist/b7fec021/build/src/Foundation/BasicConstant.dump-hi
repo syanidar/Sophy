@@ -1,0 +1,280 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-17 14:56:59.714729 UTC
+
+interface Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet:BasicConstant 8001
+  interface hash: 6117ea7d311fb4b46d27f353853aacce
+  ABI hash: 75629955daea2dc6e28b1b47bb042933
+  export-list hash: 8cd31e6e16b93cd2dcc5693171330c73
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 780eb08866e9f611cfa38104f3e4c47c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  BasicConstant.aAndBFile
+  BasicConstant.aFile
+  BasicConstant.backrank
+  BasicConstant.bishopMaterial
+  BasicConstant.darkSquares
+  BasicConstant.edge
+  BasicConstant.eighthRank
+  BasicConstant.firstRank
+  BasicConstant.gAndHFile
+  BasicConstant.hFile
+  BasicConstant.initBKing
+  BasicConstant.initBKingsideRook
+  BasicConstant.initBQueensideRook
+  BasicConstant.initKingsAndRooks
+  BasicConstant.initKingsideRooks
+  BasicConstant.initQueensideRooks
+  BasicConstant.initRooks
+  BasicConstant.initWKRBQR
+  BasicConstant.initWKing
+  BasicConstant.initWKingsideRook
+  BasicConstant.initWQRBKR
+  BasicConstant.initWQueensideRook
+  BasicConstant.kingMaterial
+  BasicConstant.kingside
+  BasicConstant.knightMaterial
+  BasicConstant.lightSquares
+  BasicConstant.pawnMaterial
+  BasicConstant.queenMaterial
+  BasicConstant.queenside
+  BasicConstant.rookMaterial
+module dependencies: Alias BasicData Bitwise
+package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-CJpWsiXJdd89SnV9dZtTwc
+                      adjunctions-4.3@adjunctions-4.3-3ol9sWZt3In19pwXwPv3Xc
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      base-orphans-0.5.4@base-orphans-0.5.4-5IQvrjd7gNP548VkOOyIq6
+                      bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      comonad-5@comonad-5-2RMxpSOQ5MCHLHIelJrHD4
+                      containers-0.5.7.1@containers-0.5.7.1
+                      contravariant-1.4@contravariant-1.4-KSQE31a7FruKHDlp90hIUT
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      distributive-0.5.0.2@distributive-0.5.0.2-Cdz2vLOk85j1doGXLcictT
+                      exceptions-0.8.3@exceptions-0.8.3-7py7fmRxowDFpHmiHGKrTb
+                      free-4.12.4@free-4.12.4-Etm59Dm8iExFxAy1L49Ovd
+                      ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
+                      hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G
+                      integer-gmp-1.0.0.1
+                      kan-extensions-5.0.1@kan-extensions-5.0.1-Asa0tkk9PuPLZ2eXuJ10Gr
+                      lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA
+                      mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      prelude-extras-0.4.0.3@prelude-extras-0.4.0.3-FAyB4iuuM7cHXdrLMZtdXq
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      profunctors-5.2@profunctors-5.2-2ZZOz6u59T2H8y7z3NgZkY
+                      reflection-2.1.2@reflection-2.1.2-J1ZzlxijzaHGRixYxgxlf9
+                      semigroupoids-5.1@semigroupoids-5.1-1Gay4xNO77GHd4DGCzVuax
+                      stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF
+                      tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
+                      template-haskell-2.11.0.0
+                      text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-81lZyuOJOvsD0zyCv2TKld
+                      unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW
+                      vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G:Data.Hashable.Generic
+         reflection-2.1.2@reflection-2.1.2-J1ZzlxijzaHGRixYxgxlf9:Data.Reflection
+         stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+family instance modules: adjunctions-4.3@adjunctions-4.3-3ol9sWZt3In19pwXwPv3Xc:Data.Functor.Rep
+                         base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.Functor.Product base-4.9.0.0:Data.Functor.Sum
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Biff
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Clown
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Flip
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Join
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Joker
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Product
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Sum
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Tannen
+                         bifunctors-5.4.1@bifunctors-5.4.1-8Xk5Wsnk1fr6rBLkW9MO8p:Data.Bifunctor.Wrapped
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         kan-extensions-5.0.1@kan-extensions-5.0.1-Asa0tkk9PuPLZ2eXuJ10Gr:Data.Functor.Day
+                         kan-extensions-5.0.1@kan-extensions-5.0.1-Asa0tkk9PuPLZ2eXuJ10Gr:Data.Functor.Yoneda
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.At
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Internal.Indexed
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Reified
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Tuple
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Wrapped
+                         lens-4.14@lens-4.14-LQbbTc84mRL8zB39b41ZKA:Control.Lens.Zoom
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
+                         profunctors-5.2@profunctors-5.2-2ZZOz6u59T2H8y7z3NgZkY:Data.Profunctor.Rep
+                         tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+                         unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Base
+                         unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashSet
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
+import  -/  Alias ba36719cc8f68ab87c0ee8446a683f1b
+  exports: 03b73823d7379fa3fc65780b7c8ac5e2
+  BitBoard 461830e1b89cbd9e95b01ba7aa2fcc74
+  PieceValue 4186039bec2d435a1f09ed24656c3b1c
+import  -/  BasicData 2a7d7454833f4f04d9c30a40b6d5a151
+  exports: 05582099e9a48170ebc021a187a7905d
+import  -/  base-4.9.0.0:Data.Bits c954f6297e2203ba924b7d4bb91aa2cf
+import  -/  base-4.9.0.0:Prelude 2d9cd8b0ec3d728f62b734df888d2e34
+55ac3fd30966a4b7760f3e519d7f112e
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   BasicConstant.$trModule2
+                   BasicConstant.$trModule1) -}
+1df14cc2e61a5ed4c4172a60e7ab30a8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "BasicConstant"#) -}
+a52f4ebd596368fe9e608f23dc6480bc
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet"#) -}
+9148ea2dc2ff0abaa8a32a2954367d1b
+  aAndBFile :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 13889313184910721216##) -}
+7a19749fe193316fd149614db6991cbd
+  aFile :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 9259542123273814144##) -}
+66828abbafea3c3bfaedf8bd69873f64
+  backrank :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 18374686479671623935##) -}
+8d7881707c53c29d6a447dee35cd3dee
+  bishopMaterial :: Alias.PieceValue
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 330#) -}
+6bcaf4984d4c0fba9126b813dcaab94a
+  darkSquares :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 12297829382473034410##) -}
+437066ecd8cc779ee0ab80fc6df7a0ed
+  edge :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 18411139144890810879##) -}
+390448975b4fabfb19da77ffea02f744
+  eighthRank :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 18374686479671623680##) -}
+7a55db8df902e43ebafd7a2b533b3d84
+  firstRank :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Word.W64# 255##) -}
+1739a7e5945353ec0ff0c43ed2e2299c
+  gAndHFile :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 217020518514230019##) -}
+831719303e610728298753d0cb82c59c
+  hFile :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 72340172838076673##) -}
+e7b69dafa34ac09f308632d8b2fc2d3d
+  initBKing :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 576460752303423488##) -}
+76b92bd89083d3c028d75efa8e3f720e
+  initBKingsideRook :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 72057594037927936##) -}
+2ace415e217e916ac14510d46dde62e5
+  initBQueensideRook :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 9223372036854775808##) -}
+35527f1dbd69ce29fa0847e1acc6d336
+  initKingsAndRooks :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 9871890383196127369##) -}
+b54168533904edb08fca4c381bb6de7c
+  initKingsideRooks :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 72057594037927937##) -}
+79629e6552bc36a5edca068ac1ccb974
+  initQueensideRooks :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 9223372036854775936##) -}
+8cb1977e61f8a1bc49e28a4e04eb178c
+  initRooks :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 9295429630892703873##) -}
+3c3233278fd5b505f85ff600986320d6
+  initWKRBQR :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 9223372036854775809##) -}
+45991d055b83cd43663012b9cad56a00
+  initWKing :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Word.W64# 8##) -}
+9de356efb190ee2b0207d0d5471b641b
+  initWKingsideRook :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Word.W64# 1##) -}
+ba7ae8174d32f03cd3252b1bbdef3994
+  initWQRBKR :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 72057594037928064##) -}
+98bf85f5b478744a1a9a737d614b7c72
+  initWQueensideRook :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Word.W64# 128##) -}
+6b1f66706145b98c4dc89806e55306a1
+  kingMaterial :: Alias.PieceValue
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 20000#) -}
+d68a66d4b0395467dcc07899c771204c
+  kingside :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 1085102592571150095##) -}
+f5d7d0fee66fc015f688e28d619b2c24
+  knightMaterial :: Alias.PieceValue
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 320#) -}
+fbe08b975021808a1f6e199f0a2a7773
+  lightSquares :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 6148914691236517205##) -}
+9b3f2cac3a5fce41cf26afd3bde4c658
+  pawnMaterial :: Alias.PieceValue
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 100#) -}
+208915c41faea8f2bd3647dec6618cfb
+  queenMaterial :: Alias.PieceValue
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 900#) -}
+6a8defcab8267004af76dc888ba8d55b
+  queenside :: Alias.BitBoard
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Word.W64# 17361641481138401520##) -}
+e784b63bc7b6c295ac9d25cc8531ee91
+  rookMaterial :: Alias.PieceValue
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 500#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
