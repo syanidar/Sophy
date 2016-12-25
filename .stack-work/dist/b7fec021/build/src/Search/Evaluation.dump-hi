@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-21 13:12:59.5409096 UTC
+2016-12-25 05:34:09.070061 UTC
 
 interface Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet:Evaluation 8001
-  interface hash: 7459d21574a40754b49e36118cba8816
-  ABI hash: 008bf86b6494569d2bab619bd735acc9
+  interface hash: 763d244decfea8b47cebcaaf070609cd
+  ABI hash: 3bd3da69b56786c19d4eb1aa90169572
   export-list hash: c3f28aa4cbbb32c03fe6e73e0d06f90e
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 25033e05df9576e4d3cdda9e165fa15d
@@ -259,7 +259,7 @@ d977743208052cd4a1a6c93d1d4ba0f9
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet"#) -}
-79fb63424ed2eed93011a384cacd88d0
+dbc8dc879295752b21310fcf6a91d65d
   $wevaluate ::
     GHC.Prim.Word#
     -> GHC.Prim.Word#
@@ -270,20 +270,11 @@ d977743208052cd4a1a6c93d1d4ba0f9
     -> GHC.Prim.Word#
     -> GHC.Prim.Word#
     -> BasicData.Color
-    -> BasicData.CastleRight
-    -> GHC.Prim.Int#
-    -> GHC.Prim.Int#
-    -> GHC.Prim.Int#
-    -> GHC.Prim.Word#
-    -> GHC.Prim.Word#
-    -> GHC.Prim.Word#
     -> GHC.Prim.Word#
     -> GHC.Prim.Int#
-    -> GHC.Prim.Word#
-    -> [Alias.ZobristKey]
     -> GHC.Prim.Int#
-  {- Arity: 20,
-     Strictness: <S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><L,U><L,U><L,U><L,U><L,U><L,U><S,U><S,U><L,U><S,U>,
+  {- Arity: 11,
+     Strictness: <S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U><S,U>,
      Inline: [0] -}
 7232b1e304750446f61ee0e8c8657faa
   $wkingDefenders ::
@@ -1037,10 +1028,10 @@ e96c78846a833f1649e59717a89eac7c
                          (GHC.Prim.word2Int#
                             (GHC.Prim.popCnt64# (GHC.Prim.and# ipv 9295429630892703873##)))
                          20#)) } }) -}
-f42704fec9c54a4c295d2ec8c2ae73a1
+31c2b88e6c08b5f1d3229bc616da7506
   evaluate :: BasicData.Position -> Alias.Evaluation
   {- Arity: 1,
-     Strictness: <S(SSSSSSSSSSLLLLLLSSLS),1*U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)>m,
+     Strictness: <S(SSSSSSSSSLLLLLLLSSLL),1*U(U,U,U,U,U,U,U,U,U,A,A,A,A,A,A,A,U,U,A,A)>m,
      Inline: INLINE[0],
      Unfolding: InlineRule (1, True, False)
                 (\ (w :: BasicData.Position) ->
@@ -1055,17 +1046,8 @@ f42704fec9c54a4c295d2ec8c2ae73a1
                         ww7
                         ww8
                         ww9
-                        ww10
-                        ww11
-                        ww12
-                        ww13
-                        ww14
-                        ww15
-                        ww16
                         ww17
-                        ww18
-                        ww19
-                        ww20 of ww21 { DEFAULT ->
+                        ww18 of ww21 { DEFAULT ->
                  GHC.Types.I# ww21 } }) -}
 d4683ca93269f1d2c87ca439536af5d8
   isolatedPawns :: BasicData.Position -> Alias.Evaluation

@@ -16,7 +16,7 @@ evaluate pos
     =   (pos^.materialBalance)
     +   (if isWhite pos then positionEval else -positionEval)
     +   space pos
-    +   mobility pos
+    -- +   mobility pos
     +   tropism pos
     -- +   openFiles pos
     -- +   openADiagonals pos

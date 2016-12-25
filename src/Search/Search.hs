@@ -201,7 +201,7 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
 
     --  We now refer to the previous evaluation of the same position stored in the hash table.
     --  Not only could we return early if the value in the table matchs certain criteria,
-    --  we could also narrow the window if the depth in which the position was stored in the table is deeper than that of the current position.
+    --  we could also narrow the window if the depth in which the position was stored in the table is deeper than or equal to that of the current position.
     entry   <- getHash position
     let hashMove        = intersect moves . maybeToList $ refutation =<< entry
         (alpha',beta')  = if pvNode then (alpha, beta) else updateBounds n alpha beta entry
@@ -210,7 +210,7 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
         setVariation hashMove
         cutoff $ maybe (error "No hash entry.") score entry
 
-    --  We could still get a good move ordering by getting the best move at a shallower depth even if couldn't have obtained the hash move.
+    --  We could still get a good move ordering by getting the best move at a shallower depth even if we couldn't have obtained the hash move.
     --  This is what's called internal iterative deepning.
     iidMove <- if null hashMove && n > 4 && pvNode
         then do
@@ -226,7 +226,7 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
     let (tactical,quiet)                = partition (isTactical position) $ moves \\ (hashMove ++ killers)
         (winningTactics,losingCaptures) = partition (`elem` noisyMoves position) tactical
         ordered                         = iidMove ++ winningTactics ++ killers ++ losingCaptures ++ quiet
-
+    --  The leftmost nodes should always be searched with full window.
     pvScore         <-  do
         let pvMove = head ordered
         score <- negate <$> negaScout (n - 1) (-beta') (-alpha') pvNode False (makeMove pvMove position)
@@ -235,12 +235,16 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
         when (score >= beta') $ cutoff score
         return score
 
+    --  Other nodes are first analyzed by so called scout search in which the null window is used in order to prove that the node fails low.
+    --  However if the scout search fails high, we have to do a research with full window.
     let
         negaScout' localAlpha _ []              = return localAlpha
         negaScout' localAlpha moveCount (x:xs)  = do
             variation   <- clearVariation
 
             score <- verifyCutoff $ do
+                --  If we are not in the pv node i.e. we are not interested in the minimax value of the position, we could reduce the search depth of later moves without significant loss of accuracy.
+                --  This is how late move reduction(LMR) works.
                 unless (isTactical position x || isCheck position x || isInCheck position || pvNode) $ do
                     let reduction   = truncate $ sqrt (fromIntegral $ n - 1) + sqrt (fromIntegral $ moveCount - 1)
                     lmrScore <- negate <$> negaScout (n - 1 - reduction) (-localAlpha - 1) (-localAlpha) False False (makeMove x position)
@@ -265,6 +269,7 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
     score           <-  negaScout' (max pvScore alpha') 1 (tail ordered)
     moveSelected    <-  getSelectedMove
 
+    --  We store the information obtained while analyzing this position into the table so that we could use it if we hit the same position in the future search.
     let sType   | score <= alpha'   = UpperBound
                 | score >= beta'    = LowerBound
                 | otherwise         = Exact

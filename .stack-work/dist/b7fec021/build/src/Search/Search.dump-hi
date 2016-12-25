@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-25 02:56:49.277753 UTC
+2016-12-25 05:34:22.55421 UTC
 
 interface Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet:Search 8001
-  interface hash: 94892d3332fb397399d3927a7a8eff6a
-  ABI hash: 3127de119458e89b815990ee38c14a7e
+  interface hash: b742dc836b0c8d53003a34fb843a367b
+  ABI hash: 554786cdc6fb98c264b6c47457f955c5
   export-list hash: 8cd0cb00fcc2320d71932da0e499c8e2
   orphan hash: 1185274e29d7af0441023b22e375ea81
   flag hash: 3191267f49135665ab03a7886aa47ab0
@@ -188,9 +188,9 @@ import  -/  BasicData 2a7d7454833f4f04d9c30a40b6d5a151
   UpperBound 10f7e51fd375eca6a7c9840613d544ee
   _zobristKey 65972c6976f94e107b02aa43c8598294
   plyCount 89e6ae44a85de21278080acc314226ce
-import  -/  Evaluation 008bf86b6494569d2bab619bd735acc9
+import  -/  Evaluation 3bd3da69b56786c19d4eb1aa90169572
   exports: c3f28aa4cbbb32c03fe6e73e0d06f90e
-  evaluate f42704fec9c54a4c295d2ec8c2ae73a1
+  evaluate 31c2b88e6c08b5f1d3229bc616da7506
 import  -/  Move 44a778e409d712d8dcaf2c07d1b2800d
   exports: c971bac89379bbc97981f28ed121b754
   isCheck 376546f14ac6501994d7226a5b89376a
@@ -269,15 +269,6 @@ c46648db375628364b747067fc96ebec
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 (Search.$s$fApplicativeEitherT_$s$fMonadReaderT
-                   @ Search.SearchEnvironment) -}
-5bde4749462a8dd4cc05ec4e44b9c8ed
-  $s$fApplicativeEitherT2 ::
-    GHC.Base.Functor
-      (Control.Monad.Trans.Reader.ReaderT
-         Search.SearchEnvironment GHC.Types.IO)
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                (Search.$s$fApplicativeEitherT_$s$fFunctorReaderT
                    @ Search.SearchEnvironment) -}
 0c6cd2cea5b1090ce11c4f7ab1191001
   $s$fApplicativeEitherT_$dApplicative ::
@@ -361,254 +352,6 @@ c46648db375628364b747067fc96ebec
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Search.$s$fApplicativeEitherT_$s$fFunctorReaderT -}
-e30673bcd0c406404ab731df9ad0490f
-  $s$fApplicativeEitherT_$s$fApplicativeStateT ::
-    GHC.Base.Applicative
-      (Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO))
-  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun: @ s.
-                  @ (Control.Monad.Trans.State.Strict.StateT
-                       s
-                       (Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO))
-                  (Search.$s$fApplicativeEitherT_$s$fApplicativeStateT_$cp1Applicative
-                     @ s)
-                  (Search.$s$fApplicativeEitherT_$s$fApplicativeStateT_$cpure @ s)
-                  (Search.$s$fApplicativeEitherT_$s$fApplicativeStateT_$c<*> @ s)
-                  (Control.Monad.Trans.State.Strict.$fApplicativeStateT_$c*>
-                     @ (Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO)
-                     @ s
-                     Search.$s$fApplicativeEitherT2
-                     Search.$s$fApplicativeEitherT1)
-                  (Control.Monad.Trans.State.Strict.$fApplicativeStateT_$c<*
-                     @ (Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO)
-                     @ s
-                     Search.$s$fApplicativeEitherT2
-                     Search.$s$fApplicativeEitherT1) -}
-73a3544d8116f4f8372c2b72ee0ef832
-  $s$fApplicativeEitherT_$s$fApplicativeStateT_$c<*> ::
-    Control.Monad.Trans.State.Strict.StateT
-      s
-      (Control.Monad.Trans.Reader.ReaderT
-         Search.SearchEnvironment GHC.Types.IO)
-      (a -> b)
-    -> Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO)
-         a
-    -> Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO)
-         b
-  {- Arity: 3, HasNoCafRefs,
-     Strictness: <L,1*C1(U)><L,C(C1(C1(U(U,1*U(U,U)))))><L,U>,
-     Inline: INLINE (sat-args=2),
-     Unfolding: InlineRule (2, False, False)
-                (\ @ s
-                   @ a
-                   @ b
-                   (ds :: Control.Monad.Trans.State.Strict.StateT
-                            s
-                            (Control.Monad.Trans.Reader.ReaderT
-                               Search.SearchEnvironment GHC.Types.IO)
-                            (a -> b))
-                   (ds1 :: Control.Monad.Trans.State.Strict.StateT
-                             s
-                             (Control.Monad.Trans.Reader.ReaderT
-                                Search.SearchEnvironment GHC.Types.IO)
-                             a) ->
-                 GHC.Base.$
-                   @ 'GHC.Types.PtrRepLifted
-                   @ (s
-                      -> Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (b, s))
-                   @ (Control.Monad.Trans.State.Strict.StateT
-                        s
-                        (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO)
-                        b)
-                   (\ (tpl :: s
-                              -> Control.Monad.Trans.Reader.ReaderT
-                                   Search.SearchEnvironment GHC.Types.IO (b, s)) ->
-                    tpl)
-                     `cast`
-                   (<s
-                     -> Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO (b, s)>_R
-                    ->_R Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                  <s>_N
-                                  <Control.Monad.Trans.Reader.ReaderT
-                                     Search.SearchEnvironment GHC.Types.IO>_R
-                                  <b>_N))
-                   (\ (s1 :: s) ->
-                    let {
-                      m1 :: Control.Monad.Trans.Reader.ReaderT
-                              Search.SearchEnvironment GHC.Types.IO (a -> b, s)
-                      = ds
-                          `cast`
-                        (Control.Monad.Trans.State.Strict.N:StateT[0]
-                             <s>_N
-                             <Control.Monad.Trans.Reader.ReaderT
-                                Search.SearchEnvironment GHC.Types.IO>_R
-                             <a -> b>_N)
-                          s1
-                    } in
-                    GHC.Base.$
-                      @ 'GHC.Types.PtrRepLifted
-                      @ (Search.SearchEnvironment -> GHC.Types.IO (b, s))
-                      @ (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (b, s))
-                      (\ (tpl :: Search.SearchEnvironment -> GHC.Types.IO (b, s)) -> tpl)
-                        `cast`
-                      (<Search.SearchEnvironment -> GHC.Types.IO (b, s)>_R
-                       ->_R Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                     <*>_N
-                                     <Search.SearchEnvironment>_R
-                                     <GHC.Types.IO>_R
-                                     <(b, s)>_N))
-                      (\ (r1 :: Search.SearchEnvironment) ->
-                       GHC.Base.bindIO
-                         @ (a -> b, s)
-                         @ (b, s)
-                         (Control.Monad.Trans.Reader.runReaderT
-                            @ Search.SearchEnvironment
-                            @ *
-                            @ GHC.Types.IO
-                            @ (a -> b, s)
-                            m1
-                            r1)
-                         (\ (a1 :: (a -> b, s)) ->
-                          case a1 of wild { (,) f s' ->
-                          let {
-                            m2 :: Control.Monad.Trans.Reader.ReaderT
-                                    Search.SearchEnvironment GHC.Types.IO (a, s)
-                            = ds1
-                                `cast`
-                              (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                   <s>_N
-                                   <Control.Monad.Trans.Reader.ReaderT
-                                      Search.SearchEnvironment GHC.Types.IO>_R
-                                   <a>_N)
-                                s'
-                          } in
-                          Control.Monad.Trans.Reader.runReaderT
-                            @ Search.SearchEnvironment
-                            @ *
-                            @ GHC.Types.IO
-                            @ (b, s)
-                            (GHC.Base.$
-                               @ 'GHC.Types.PtrRepLifted
-                               @ (Search.SearchEnvironment -> GHC.Types.IO (b, s))
-                               @ (Control.Monad.Trans.Reader.ReaderT
-                                    Search.SearchEnvironment GHC.Types.IO (b, s))
-                               (\ (tpl :: Search.SearchEnvironment -> GHC.Types.IO (b, s)) -> tpl)
-                                 `cast`
-                               (<Search.SearchEnvironment -> GHC.Types.IO (b, s)>_R
-                                ->_R Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                              <*>_N
-                                              <Search.SearchEnvironment>_R
-                                              <GHC.Types.IO>_R
-                                              <(b, s)>_N))
-                               (\ (r2 :: Search.SearchEnvironment) ->
-                                GHC.Base.bindIO
-                                  @ (a, s)
-                                  @ (b, s)
-                                  (Control.Monad.Trans.Reader.runReaderT
-                                     @ Search.SearchEnvironment
-                                     @ *
-                                     @ GHC.Types.IO
-                                     @ (a, s)
-                                     m2
-                                     r2)
-                                  (\ (a2 :: (a, s)) ->
-                                   case a2 of wild1 { (,) x s'' ->
-                                   Control.Monad.Trans.Reader.runReaderT
-                                     @ Search.SearchEnvironment
-                                     @ *
-                                     @ GHC.Types.IO
-                                     @ (b, s)
-                                     (Search.$s$fApplicativeEitherT_$s$fMonadReaderT_$creturn
-                                        @ Search.SearchEnvironment
-                                        @ (b, s)
-                                        (f x, s''))
-                                     r2 })))
-                            r1 })))) -}
-4ffdb0f80431813d79f3977a6d4c51ca
-  $s$fApplicativeEitherT_$s$fApplicativeStateT_$cp1Applicative ::
-    GHC.Base.Functor
-      (Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO))
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Search.$s$fApplicativeEitherT_$s$fFunctorStateT -}
-718280e1282dd850dd238c258cce4c51
-  $s$fApplicativeEitherT_$s$fApplicativeStateT_$cpure ::
-    a
-    -> Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO)
-         a
-  {- Arity: 4, HasNoCafRefs, Strictness: <L,U><L,U><L,A><S,U>,
-     Inline: INLINE (sat-args=1),
-     Unfolding: InlineRule (1, False, False)
-                (\ @ s @ a (a1 :: a) ->
-                 GHC.Base.$
-                   @ 'GHC.Types.PtrRepLifted
-                   @ (s
-                      -> Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (a, s))
-                   @ (Control.Monad.Trans.State.Strict.StateT
-                        s
-                        (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO)
-                        a)
-                   (\ (tpl :: s
-                              -> Control.Monad.Trans.Reader.ReaderT
-                                   Search.SearchEnvironment GHC.Types.IO (a, s)) ->
-                    tpl)
-                     `cast`
-                   (<s
-                     -> Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO (a, s)>_R
-                    ->_R Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                  <s>_N
-                                  <Control.Monad.Trans.Reader.ReaderT
-                                     Search.SearchEnvironment GHC.Types.IO>_R
-                                  <a>_N))
-                   (\ (s1 :: s)
-                      (eta1 :: Search.SearchEnvironment)
-                      (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                    ((Search.$s$fApplicativeEitherT_$s$fMonadReaderT_$creturn
-                        @ Search.SearchEnvironment
-                        @ (a, s)
-                        (a1, s1))
-                       `cast`
-                     (Control.Monad.Trans.Reader.N:ReaderT[0]
-                          <*>_N <Search.SearchEnvironment>_R <GHC.Types.IO>_R <(a, s)>_N)
-                       eta1)
-                      `cast`
-                    (GHC.Types.N:IO[0] <(a, s)>_R)
-                      eta2)
-                     `cast`
-                   (<s>_R
-                    ->_R Trans
-                             (<Search.SearchEnvironment>_R
-                              ->_R Sym (GHC.Types.N:IO[0] <(a, s)>_R))
-                             (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                       <*>_N
-                                       <Search.SearchEnvironment>_R
-                                       <GHC.Types.IO>_R
-                                       <(a, s)>_N)))) -}
 1fc80e1b5c8aa7c6e3cd832eb75c6f1a
   $s$fApplicativeEitherT_$s$fFunctorReaderT ::
     GHC.Base.Functor
@@ -722,137 +465,6 @@ c5b228df7651f0407ea21155240da162
                  ->_R <Control.Monad.Trans.Reader.ReaderT r GHC.Types.IO a>_R
                  ->_R Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
                                <*>_N <r>_R <GHC.Types.IO>_R <b>_N)) -}
-cec3c5b808bd51470fe2668b26ebf744
-  $s$fApplicativeEitherT_$s$fFunctorStateT ::
-    GHC.Base.Functor
-      (Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO))
-  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun: @ s.
-                  @ (Control.Monad.Trans.State.Strict.StateT
-                       s
-                       (Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO))
-                  (Search.$s$fApplicativeEitherT_$s$fFunctorStateT_$cfmap @ s)
-                  (Control.Monad.Trans.State.Strict.$fFunctorStateT_$c<$
-                     @ (Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO)
-                     @ s
-                     Search.$s$fApplicativeEitherT2) -}
-3b5013eff9eac7c6615e0323fcc37fee
-  $s$fApplicativeEitherT_$s$fFunctorStateT_$cfmap ::
-    (a -> b)
-    -> Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO)
-         a
-    -> Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO)
-         b
-  {- Arity: 3, HasNoCafRefs, Strictness: <L,C(U)><L,1*C1(U)><L,U>,
-     Inline: INLINE (sat-args=2),
-     Unfolding: InlineRule (2, False, False)
-                (\ @ s
-                   @ a
-                   @ b
-                   (f :: a -> b)
-                   (m1 :: Control.Monad.Trans.State.Strict.StateT
-                            s
-                            (Control.Monad.Trans.Reader.ReaderT
-                               Search.SearchEnvironment GHC.Types.IO)
-                            a) ->
-                 GHC.Base.$
-                   @ 'GHC.Types.PtrRepLifted
-                   @ (s
-                      -> Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (b, s))
-                   @ (Control.Monad.Trans.State.Strict.StateT
-                        s
-                        (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO)
-                        b)
-                   (\ (tpl :: s
-                              -> Control.Monad.Trans.Reader.ReaderT
-                                   Search.SearchEnvironment GHC.Types.IO (b, s)) ->
-                    tpl)
-                     `cast`
-                   (<s
-                     -> Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO (b, s)>_R
-                    ->_R Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                  <s>_N
-                                  <Control.Monad.Trans.Reader.ReaderT
-                                     Search.SearchEnvironment GHC.Types.IO>_R
-                                  <b>_N))
-                   (\ (s1 :: s) ->
-                    GHC.Base.$
-                      @ 'GHC.Types.PtrRepLifted
-                      @ (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (a, s))
-                      @ (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (b, s))
-                      (let {
-                         f1 :: (a, s) -> (b, s) {- Arity: 1 -}
-                         = \ (ds :: (a, s)) -> case ds of wild { (,) a1 s' -> (f a1, s') }
-                       } in
-                       (\ (eta1 :: Control.Monad.Trans.Reader.ReaderT
-                                     Search.SearchEnvironment GHC.Types.IO (a, s))
-                          (eta2 :: Search.SearchEnvironment) ->
-                        (GHC.Base.$
-                           @ 'GHC.Types.PtrRepLifted
-                           @ (Search.SearchEnvironment -> GHC.Types.IO (b, s))
-                           @ (Control.Monad.Trans.Reader.ReaderT
-                                Search.SearchEnvironment GHC.Types.IO (b, s))
-                           (\ (tpl :: Search.SearchEnvironment -> GHC.Types.IO (b, s)) -> tpl)
-                             `cast`
-                           (<Search.SearchEnvironment -> GHC.Types.IO (b, s)>_R
-                            ->_R Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                          <*>_N
-                                          <Search.SearchEnvironment>_R
-                                          <GHC.Types.IO>_R
-                                          <(b, s)>_N))
-                           (let {
-                              g :: Search.SearchEnvironment -> GHC.Types.IO (a, s)
-                              = Control.Monad.Trans.Reader.runReaderT
-                                  @ Search.SearchEnvironment
-                                  @ *
-                                  @ GHC.Types.IO
-                                  @ (a, s)
-                                  eta1
-                            } in
-                            (\ (x :: Search.SearchEnvironment)
-                               (eta3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                             (GHC.Base.$fFunctorIO_$cfmap @ (a, s) @ (b, s) f1 (g x))
-                               `cast`
-                             (GHC.Types.N:IO[0] <(b, s)>_R)
-                               eta3)
-                              `cast`
-                            (<Search.SearchEnvironment>_R
-                             ->_R Sym (GHC.Types.N:IO[0] <(b, s)>_R))))
-                          `cast`
-                        (Control.Monad.Trans.Reader.N:ReaderT[0]
-                             <*>_N <Search.SearchEnvironment>_R <GHC.Types.IO>_R <(b, s)>_N)
-                          eta2)
-                         `cast`
-                       (<Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (a, s)>_R
-                        ->_R Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                      <*>_N
-                                      <Search.SearchEnvironment>_R
-                                      <GHC.Types.IO>_R
-                                      <(b, s)>_N)))
-                      (Control.Monad.Trans.State.Strict.runStateT
-                         @ s
-                         @ (Control.Monad.Trans.Reader.ReaderT
-                              Search.SearchEnvironment GHC.Types.IO)
-                         @ a
-                         m1
-                         s1))) -}
 b988e9c4fc90dd12fb3063fa1c6a6621
   $s$fApplicativeEitherT_$s$fMonadReaderT ::
     GHC.Base.Monad (Control.Monad.Trans.Reader.ReaderT r GHC.Types.IO)
@@ -988,7 +600,7 @@ a007c1cb3d54cf44237f46734a855bdb
                           (<r>_R ->_R Sym (GHC.Types.N:IO[0] <a>_R))
                           (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
                                     <*>_N <r>_R <GHC.Types.IO>_R <a>_N))) -}
-4ace7fc467ab33c694fa182bd3991ec1
+54479ac2c5eb13226cf93eaec61e46f7
   $s$fApplicativeEitherT_$s$fMonadStateT ::
     GHC.Base.Monad
       (Control.Monad.Trans.State.Strict.StateT
@@ -1001,299 +613,31 @@ a007c1cb3d54cf44237f46734a855bdb
                        s
                        (Control.Monad.Trans.Reader.ReaderT
                           Search.SearchEnvironment GHC.Types.IO))
-                  (Search.$s$fApplicativeEitherT_$s$fMonadStateT_$cp1Monad @ s)
-                  (Search.$s$fApplicativeEitherT_$s$fMonadStateT_$c>>= @ s)
-                  (Search.$s$fApplicativeEitherT_$s$fMonadStateT_$c>> @ s)
+                  (Control.Monad.Trans.State.Strict.$fMonadStateT_$cp1Monad
+                     @ (Control.Monad.Trans.Reader.ReaderT
+                          Search.SearchEnvironment GHC.Types.IO)
+                     @ s
+                     Search.$s$fApplicativeEitherT1)
+                  (Control.Monad.Trans.State.Strict.$fMonadStateT_$c>>=
+                     @ (Control.Monad.Trans.Reader.ReaderT
+                          Search.SearchEnvironment GHC.Types.IO)
+                     @ s
+                     Search.$s$fApplicativeEitherT1)
+                  (Control.Monad.Trans.State.Strict.$fMonadStateT_$c>>
+                     @ (Control.Monad.Trans.Reader.ReaderT
+                          Search.SearchEnvironment GHC.Types.IO)
+                     @ s
+                     Search.$s$fApplicativeEitherT1)
                   (Control.Monad.Trans.State.Strict.$fMonadStateT_$creturn
                      @ (Control.Monad.Trans.Reader.ReaderT
                           Search.SearchEnvironment GHC.Types.IO)
                      @ s
                      Search.$s$fApplicativeEitherT1)
-                  (Search.$s$fApplicativeEitherT_$s$fMonadStateT_$cfail @ s) -}
-942ee46c4f8cac83f0f8dc8f416a801e
-  $s$fApplicativeEitherT_$s$fMonadStateT_$c>> ::
-    Control.Monad.Trans.State.Strict.StateT
-      s
-      (Control.Monad.Trans.Reader.ReaderT
-         Search.SearchEnvironment GHC.Types.IO)
-      a
-    -> Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO)
-         b
-    -> Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO)
-         b
-  {- Arity: 3, HasNoCafRefs,
-     Strictness: <L,1*C1(U)><L,C(C1(C1(U)))><L,U>,
-     Inline: INLINE (sat-args=2),
-     Unfolding: InlineRule (2, False, False)
-                (\ @ s
-                   @ a
-                   @ b
-                   (m1 :: Control.Monad.Trans.State.Strict.StateT
-                            s
-                            (Control.Monad.Trans.Reader.ReaderT
-                               Search.SearchEnvironment GHC.Types.IO)
-                            a)
-                   (k :: Control.Monad.Trans.State.Strict.StateT
-                           s
-                           (Control.Monad.Trans.Reader.ReaderT
-                              Search.SearchEnvironment GHC.Types.IO)
-                           b) ->
-                 GHC.Base.$
-                   @ 'GHC.Types.PtrRepLifted
-                   @ (s
-                      -> Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (b, s))
-                   @ (Control.Monad.Trans.State.Strict.StateT
-                        s
-                        (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO)
-                        b)
-                   (\ (tpl :: s
-                              -> Control.Monad.Trans.Reader.ReaderT
-                                   Search.SearchEnvironment GHC.Types.IO (b, s)) ->
-                    tpl)
-                     `cast`
-                   (<s
-                     -> Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO (b, s)>_R
-                    ->_R Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                  <s>_N
-                                  <Control.Monad.Trans.Reader.ReaderT
-                                     Search.SearchEnvironment GHC.Types.IO>_R
-                                  <b>_N))
-                   (\ (s1 :: s) ->
-                    let {
-                      m2 :: Control.Monad.Trans.Reader.ReaderT
-                              Search.SearchEnvironment GHC.Types.IO (a, s)
-                      = Control.Monad.Trans.State.Strict.runStateT
-                          @ s
-                          @ (Control.Monad.Trans.Reader.ReaderT
-                               Search.SearchEnvironment GHC.Types.IO)
-                          @ a
-                          m1
-                          s1
-                    } in
-                    GHC.Base.$
-                      @ 'GHC.Types.PtrRepLifted
-                      @ (Search.SearchEnvironment -> GHC.Types.IO (b, s))
-                      @ (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (b, s))
-                      (\ (tpl :: Search.SearchEnvironment -> GHC.Types.IO (b, s)) -> tpl)
-                        `cast`
-                      (<Search.SearchEnvironment -> GHC.Types.IO (b, s)>_R
-                       ->_R Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                     <*>_N
-                                     <Search.SearchEnvironment>_R
-                                     <GHC.Types.IO>_R
-                                     <(b, s)>_N))
-                      (\ (r1 :: Search.SearchEnvironment) ->
-                       GHC.Base.bindIO
-                         @ (a, s)
-                         @ (b, s)
-                         (Control.Monad.Trans.Reader.runReaderT
-                            @ Search.SearchEnvironment
-                            @ *
-                            @ GHC.Types.IO
-                            @ (a, s)
-                            m2
-                            r1)
-                         (\ (a1 :: (a, s)) ->
-                          case a1 of wild { (,) a2 s' ->
-                          Control.Monad.Trans.Reader.runReaderT
-                            @ Search.SearchEnvironment
-                            @ *
-                            @ GHC.Types.IO
-                            @ (b, s)
-                            (Control.Monad.Trans.State.Strict.runStateT
-                               @ s
-                               @ (Control.Monad.Trans.Reader.ReaderT
-                                    Search.SearchEnvironment GHC.Types.IO)
-                               @ b
-                               k
-                               s')
-                            r1 })))) -}
-6a1e94c0f1855f7d0036ec5262ae8aea
-  $s$fApplicativeEitherT_$s$fMonadStateT_$c>>= ::
-    Control.Monad.Trans.State.Strict.StateT
-      s
-      (Control.Monad.Trans.Reader.ReaderT
-         Search.SearchEnvironment GHC.Types.IO)
-      a
-    -> (a
-        -> Control.Monad.Trans.State.Strict.StateT
-             s
-             (Control.Monad.Trans.Reader.ReaderT
-                Search.SearchEnvironment GHC.Types.IO)
-             b)
-    -> Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO)
-         b
-  {- Arity: 3, HasNoCafRefs,
-     Strictness: <L,1*C1(U)><L,C(C1(C1(C1(U))))><L,U>,
-     Inline: INLINE (sat-args=2),
-     Unfolding: InlineRule (2, False, False)
-                (\ @ s
-                   @ a
-                   @ b
-                   (m1 :: Control.Monad.Trans.State.Strict.StateT
-                            s
-                            (Control.Monad.Trans.Reader.ReaderT
-                               Search.SearchEnvironment GHC.Types.IO)
-                            a)
-                   (k :: a
-                         -> Control.Monad.Trans.State.Strict.StateT
-                              s
-                              (Control.Monad.Trans.Reader.ReaderT
-                                 Search.SearchEnvironment GHC.Types.IO)
-                              b) ->
-                 GHC.Base.$
-                   @ 'GHC.Types.PtrRepLifted
-                   @ (s
-                      -> Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (b, s))
-                   @ (Control.Monad.Trans.State.Strict.StateT
-                        s
-                        (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO)
-                        b)
-                   (\ (tpl :: s
-                              -> Control.Monad.Trans.Reader.ReaderT
-                                   Search.SearchEnvironment GHC.Types.IO (b, s)) ->
-                    tpl)
-                     `cast`
-                   (<s
-                     -> Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO (b, s)>_R
-                    ->_R Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                  <s>_N
-                                  <Control.Monad.Trans.Reader.ReaderT
-                                     Search.SearchEnvironment GHC.Types.IO>_R
-                                  <b>_N))
-                   (\ (s1 :: s) ->
-                    let {
-                      m2 :: Control.Monad.Trans.Reader.ReaderT
-                              Search.SearchEnvironment GHC.Types.IO (a, s)
-                      = Control.Monad.Trans.State.Strict.runStateT
-                          @ s
-                          @ (Control.Monad.Trans.Reader.ReaderT
-                               Search.SearchEnvironment GHC.Types.IO)
-                          @ a
-                          m1
-                          s1
-                    } in
-                    GHC.Base.$
-                      @ 'GHC.Types.PtrRepLifted
-                      @ (Search.SearchEnvironment -> GHC.Types.IO (b, s))
-                      @ (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (b, s))
-                      (\ (tpl :: Search.SearchEnvironment -> GHC.Types.IO (b, s)) -> tpl)
-                        `cast`
-                      (<Search.SearchEnvironment -> GHC.Types.IO (b, s)>_R
-                       ->_R Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                     <*>_N
-                                     <Search.SearchEnvironment>_R
-                                     <GHC.Types.IO>_R
-                                     <(b, s)>_N))
-                      (\ (r1 :: Search.SearchEnvironment) ->
-                       GHC.Base.bindIO
-                         @ (a, s)
-                         @ (b, s)
-                         (Control.Monad.Trans.Reader.runReaderT
-                            @ Search.SearchEnvironment
-                            @ *
-                            @ GHC.Types.IO
-                            @ (a, s)
-                            m2
-                            r1)
-                         (\ (a1 :: (a, s)) ->
-                          case a1 of wild { (,) a2 s' ->
-                          Control.Monad.Trans.Reader.runReaderT
-                            @ Search.SearchEnvironment
-                            @ *
-                            @ GHC.Types.IO
-                            @ (b, s)
-                            (Control.Monad.Trans.State.Strict.runStateT
-                               @ s
-                               @ (Control.Monad.Trans.Reader.ReaderT
-                                    Search.SearchEnvironment GHC.Types.IO)
-                               @ b
-                               (k a2)
-                               s')
-                            r1 })))) -}
-2c820081f16a2eef3958418ba25135d0
-  $s$fApplicativeEitherT_$s$fMonadStateT_$cfail ::
-    GHC.Base.String
-    -> Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO)
-         a
-  {- Arity: 4, Strictness: <B,U><B,A><B,A><B,U>x,
-     Inline: INLINE (sat-args=1),
-     Unfolding: InlineRule (1, False, False)
-                (\ @ s @ a (str :: GHC.Base.String) ->
-                 GHC.Base.$
-                   @ 'GHC.Types.PtrRepLifted
-                   @ (s
-                      -> Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO (a, s))
-                   @ (Control.Monad.Trans.State.Strict.StateT
-                        s
-                        (Control.Monad.Trans.Reader.ReaderT
-                           Search.SearchEnvironment GHC.Types.IO)
-                        a)
-                   (\ (tpl :: s
-                              -> Control.Monad.Trans.Reader.ReaderT
-                                   Search.SearchEnvironment GHC.Types.IO (a, s)) ->
-                    tpl)
-                     `cast`
-                   (<s
-                     -> Control.Monad.Trans.Reader.ReaderT
-                          Search.SearchEnvironment GHC.Types.IO (a, s)>_R
-                    ->_R Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                  <s>_N
-                                  <Control.Monad.Trans.Reader.ReaderT
-                                     Search.SearchEnvironment GHC.Types.IO>_R
-                                  <a>_N))
-                   (\ (ds :: s)
-                      (eta1 :: Search.SearchEnvironment)
-                      (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                    (GHC.Base.const
-                       @ (GHC.Types.IO (a, s))
-                       @ Search.SearchEnvironment
-                       (GHC.Base.$fMonadIO_$cfail @ (a, s) str)
-                       eta1)
-                      `cast`
-                    (GHC.Types.N:IO[0] <(a, s)>_R)
-                      eta2)
-                     `cast`
-                   (<s>_R
-                    ->_R Trans
-                             (<Search.SearchEnvironment>_R
-                              ->_R Sym (GHC.Types.N:IO[0] <(a, s)>_R))
-                             (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                       <*>_N
-                                       <Search.SearchEnvironment>_R
-                                       <GHC.Types.IO>_R
-                                       <(a, s)>_N)))) -}
-f424d33424a002b67bee421f9dbff8a5
-  $s$fApplicativeEitherT_$s$fMonadStateT_$cp1Monad ::
-    GHC.Base.Applicative
-      (Control.Monad.Trans.State.Strict.StateT
-         s
-         (Control.Monad.Trans.Reader.ReaderT
-            Search.SearchEnvironment GHC.Types.IO))
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Search.$s$fApplicativeEitherT_$s$fApplicativeStateT -}
+                  (Control.Monad.Trans.State.Strict.$fMonadStateT_$cfail
+                     @ (Control.Monad.Trans.Reader.ReaderT
+                          Search.SearchEnvironment GHC.Types.IO)
+                     @ s
+                     Search.$s$fApplicativeEitherT1) -}
 cebee4a49b5463891739afe8c84fa07d
   $s$fMonadReaderrEitherT1 ::
     Control.Monad.Reader.Class.MonadReader
@@ -1364,7 +708,7 @@ cebee4a49b5463891739afe8c84fa07d
                           Search.SearchEnvironment GHC.Types.IO)
                      @ s
                      Search.$s$fMonadReaderrEitherT1) -}
-af5d9ffd498c86f72989570189d2883a
+c299166563d75dee93ae4b3e045971ee
   $s$fMonadStatesEitherT_$s$fMonadStatesStateT ::
     Control.Monad.State.Class.MonadState
       s
@@ -1607,7 +951,7 @@ f3ec38ee4e831b0101f8c33705c1aeac
                            (Data.Vector.Mutable.MVector
                               (Control.Monad.Primitive.D:R:PrimStateIO[0])
                               <Search.HashEntry>_R)_R #) } }) -}
-c4a4fdc923dc3fac6fa208cc35392095
+5745242624f5834d0db7d988557d114e
   $widdfs ::
     GHC.Base.Maybe
       (GHC.Conc.Sync.TVar (Alias.Evaluation, Search.SearchState))
@@ -1641,7 +985,7 @@ c4a4fdc923dc3fac6fa208cc35392095
                        (sc1 :: GHC.Types.Int)
                        (sc2 :: GHC.Prim.Int#) ->
                      let {
-                       lvl56 :: GHC.Prim.Int# = GHC.Prim.+# sc2 1#
+                       lvl58 :: GHC.Prim.Int# = GHC.Prim.+# sc2 1#
                      } in
                      let {
                        m1 :: Search.Search Alias.Evaluation
@@ -1723,7 +1067,7 @@ c4a4fdc923dc3fac6fa208cc35392095
                                                      eta1 of s2# { DEFAULT ->
                                               (# s2#, GHC.Tuple.() #) } } })
                                         ipv2 of ds3 { (#,#) ipv8 ipv9 ->
-                                 ((($siddfs' sc1 x lvl56)
+                                 ((($siddfs' sc1 x lvl58)
                                      `cast`
                                    (Trans
                                         (Control.Monad.Trans.Either.N:EitherT[0]
@@ -1840,7 +1184,7 @@ c4a4fdc923dc3fac6fa208cc35392095
                        @ (GHC.Base.Maybe Search.HashEntry)
                        ipv1,
                      w2) #) }) -}
-31606f8118f1aa06f7c186aebfa4e964
+284a86eeecd77eda22bb3dee8409bd23
   $wputKiller ::
     Alias.Depth
     -> GHC.Prim.Word# -> BasicData.Position -> Search.Search ()
@@ -2090,7 +1434,7 @@ f7768fbf09609d450ace4f8b6ac5a325
                  (# s2#,
                     (Data.Either.Right @ GHC.Types.Int @ () GHC.Tuple.(),
                      eta1) #) } } } }) -}
-036a8dba9545a03b141ea3e0cdd5cc01
+de1e141ba29f18918acb17872477a9f5
   aspirationSearch ::
     Alias.Depth
     -> Alias.Evaluation
@@ -2114,7 +1458,7 @@ f7768fbf09609d450ace4f8b6ac5a325
                      {- Arity: 2, Strictness: <L,U(U)><L,U(U)> -}
                    = \ (lower :: Alias.Alpha) (upper :: Alias.Beta) ->
                      let {
-                       lvl56 :: Control.Monad.Trans.Either.EitherT
+                       lvl58 :: Control.Monad.Trans.Either.EitherT
                                   Alias.Evaluation
                                   (Control.Monad.Trans.State.Strict.StateT
                                      Search.SearchState
@@ -2128,7 +1472,7 @@ f7768fbf09609d450ace4f8b6ac5a325
                            upper
                      } in
                      let {
-                       lvl57 :: Control.Monad.Trans.Either.EitherT
+                       lvl59 :: Control.Monad.Trans.Either.EitherT
                                   Alias.Evaluation
                                   (Control.Monad.Trans.State.Strict.StateT
                                      Search.SearchState
@@ -2207,7 +1551,7 @@ f7768fbf09609d450ace4f8b6ac5a325
                                         (GHC.Prim.<=# x y1) of wild6 {
                                    GHC.Types.False -> ds1
                                    GHC.Types.True
-                                   -> ((lvl56
+                                   -> ((lvl58
                                           `cast`
                                         (Trans
                                              (Control.Monad.Trans.Either.N:EitherT[0]
@@ -2238,7 +1582,7 @@ f7768fbf09609d450ace4f8b6ac5a325
                                              Search.SearchState)>_R)
                                         ipv } }
                               GHC.Types.True
-                              -> ((lvl57
+                              -> ((lvl59
                                      `cast`
                                    (Trans
                                         (Control.Monad.Trans.Either.N:EitherT[0]
@@ -2364,7 +1708,7 @@ a624657d1301799dff5077e6df03579d
                  (# s2#,
                     (Data.Either.Right @ GHC.Types.Int @ () GHC.Tuple.(),
                      eta1) #) } }) -}
-c5c3a075a080abf6744b99ea5934a4e4
+74c50d7a60efebacc57140ec27cda9cb
   clearVariation :: Search.Search Alias.Variation
   {- Arity: 3, Strictness: <L,U(U,U,U)><L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -2396,7 +1740,7 @@ c5c3a075a080abf6744b99ea5934a4e4
                                        (Control.Monad.Trans.Reader.ReaderT
                                           Search.SearchEnvironment GHC.Types.IO)>_R
                                     <Alias.Variation>_N)))) -}
-ec04bbe06df310c5f9de70dd2ed8f515
+4fba5648bf5257b97d6996cbcb2ef483
   clearVariation1 ::
     Search.SearchState
     -> Search.SearchEnvironment
@@ -2448,7 +1792,7 @@ ec04bbe06df310c5f9de70dd2ed8f515
                             @ Alias.Variation
                             (case s1 of wild2 { Search.SearchState dt ds ds2 -> ds }),
                           s') #) } } }) -}
-441cbab95fc670d89b605d3b971f7233
+89939e8b97d312dff7a866a5af8e8c56
   clearVariation2 ::
     Control.Monad.Trans.Either.EitherT
       Alias.Evaluation
@@ -2599,7 +1943,7 @@ a7b9ada7c476f0b2a1b483789a7ef8e5
          (Data.Vector.Mutable.MVector
             (Control.Monad.Primitive.PrimState GHC.Types.IO) Search.HashEntry)
   {- Arity: 1, Strictness: <L,U>x -}
-c311aefa254c19eb49523e5be8eb261b
+339512eebb934d440f31a733249feae2
   getHash ::
     BasicData.Position
     -> Search.Search (GHC.Base.Maybe Search.HashEntry)
@@ -2623,7 +1967,7 @@ c311aefa254c19eb49523e5be8eb261b
                                        (Control.Monad.Trans.Reader.ReaderT
                                           Search.SearchEnvironment GHC.Types.IO)>_R
                                     <GHC.Base.Maybe Search.HashEntry>_N))) -}
-4c433152d31b20a93c7d5346cc1297d5
+dc2844fe37b76226bcb65f7ddd982ca2
   getHash1 ::
     BasicData.Position
     -> Search.SearchState
@@ -2844,7 +2188,7 @@ c311aefa254c19eb49523e5be8eb261b
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Search.SearchEnvironment) ->
                  case ds of wild { Search.SearchEnvironment x -> x }) -}
-f5c67c91b9cec2cc0e9d230c88f3cd4b
+a13d7589cd54052848a360f464e5a16a
   getHash5 ::
     BasicData.Position
     -> Search.SearchState
@@ -2858,7 +2202,7 @@ f5c67c91b9cec2cc0e9d230c88f3cd4b
      Unfolding: (\ (x :: BasicData.Position)
                    (eta1 :: Search.SearchState) ->
                  let {
-                   lvl56 :: GHC.Types.Int
+                   lvl58 :: GHC.Types.Int
                    = case x of wild { BasicData.Position dt dt1 dt2 dt3 dt4 dt5 dt6 dt7 ds1 ds2 dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 ds3 ->
                      GHC.Types.I# (GHC.Prim.word2Int# dt16) }
                  } in
@@ -2924,7 +2268,7 @@ f5c67c91b9cec2cc0e9d230c88f3cd4b
                              (case y of wild2 { Data.Vector.Mutable.MVector dt dt1 dt2 ->
                               case dt1 of wild3 {
                                 DEFAULT
-                                -> case lvl56 of wild4 { GHC.Types.I# x1 ->
+                                -> case lvl58 of wild4 { GHC.Types.I# x1 ->
                                    case GHC.Classes.modInt# x1 wild3 of ww2 { DEFAULT ->
                                    GHC.Types.I# ww2 } }
                                 -1# -> Search.getHash6
@@ -3113,7 +2457,7 @@ f90da9e077b805d955c196dbec9788cd
                        @ Alias.Variation
                        (case s1 of wild { Search.SearchState dt ds ds1 -> ds }),
                      s1) #)) -}
-1852af05e99ea6d2e9cffaf39822978c
+b17ee7b3cb6a4224d1d75ab6aed8c7e2
   iddfs ::
     Alias.Depth
     -> GHC.Base.Maybe
@@ -3129,7 +2473,7 @@ f90da9e077b805d955c196dbec9788cd
                             (GHC.Conc.Sync.TVar (Alias.Evaluation, Search.SearchState)))
                    (w2 :: BasicData.Position) ->
                  Search.$widdfs w1 w2) -}
-92f7997c5251262c8921ef87f83e4d87
+b6354ef574977919b66741d5e1240e03
   indexPos :: BasicData.Position -> Search.Search GHC.Types.Int
   {- Arity: 2,
      Strictness: <L,1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,U,A)><L,U>,
@@ -3282,7 +2626,7 @@ fe5eef1a7dd60e0002cc3c763e11c9ea
                 (\ (ds :: Search.HashEntry) ->
                  case ds of wild { Search.HashEntry dt dt1 dt2 ds1 ds2 ->
                  GHC.Types.I# dt1 }) -}
-341eb5b84f6844d3f599d9f3bcf67dfb
+91c045ed1793b5e74aff4b95a083b9a0
   putHash ::
     BasicData.Position
     -> GHC.Base.Maybe Search.HashEntry
@@ -3309,7 +2653,7 @@ fe5eef1a7dd60e0002cc3c763e11c9ea
                                        (Control.Monad.Trans.Reader.ReaderT
                                           Search.SearchEnvironment GHC.Types.IO)>_R
                                     <()>_N))) -}
-45afe2dbb678c2058aadfa06147d014f
+91cb58d28a8714afc31a914abed4a9f1
   putHash1 ::
     BasicData.Position
     -> GHC.Base.Maybe Search.HashEntry
@@ -3431,7 +2775,7 @@ fe5eef1a7dd60e0002cc3c763e11c9ea
                                 <GHC.Types.IO>_R
                                 <(Data.Either.Either GHC.Types.Int (),
                                   Search.SearchState)>_N)))) -}
-cbaa6bc8cea9bc9e9f143f9c647f7e1f
+53deb4309f963d44198cf19fc7224241
   putKiller ::
     Alias.Depth -> Alias.Move -> BasicData.Position -> Search.Search ()
   {- Arity: 3,
@@ -3458,7 +2802,7 @@ ae86cc37c72a79aca491bd5e60930948
                    (eta2 :: Search.SearchEnvironment)
                    (eta3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  (# eta3, (Search.$sunless2, eta1) #)) -}
-657d251ba7fcd3e6e4b6e46b59b5a176
+74b3bcba3cf6c5b1ac308a0c7666341b
   putMove :: Alias.Move -> Search.Search ()
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (1, True, False)
@@ -3687,7 +3031,7 @@ fbb4322db6f27d353551b63e43ac3731
                  (<Search.SearchEnvironment>_R
                   ->_R Sym (GHC.Types.N:IO[0]
                                 <(Alias.Evaluation, Search.SearchState)>_R))) -}
-3a7c01d872baf4976bc882028eba56a3
+e404c2eee2b64098c7beca7e5f1d7ef9
   setVariation :: Alias.Variation -> Search.Search ()
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (1, True, False)
@@ -3732,7 +3076,7 @@ a86094c036fa077710595ba526f066d2
                       @ Search.HashTable
                       @ Search.SearchEnvironment
                       Search.$WSearchEnvironment)) -}
-0fb7697fa4db521764499075de544ace
+d80f665d1a2db4152ed03e0279723a4d
   tickCounter :: Search.Search ()
   {- Unfolding: (Control.Monad.Trans.Either.$fMonadStatesEitherT_$cstate
                    @ Search.SearchState
@@ -3874,7 +3218,7 @@ a3ae153c1c8d767680cc0e5d39d0ffae
                    (\ (y1 :: Alias.Variation) ->
                     case y1 of dt1 { DEFAULT -> Search.SearchState dt dt1 x3 })
                    (f1 x2) }) -}
-b611d1e32c7780ac7aefabc5ac570560
+9f1dffe1c3676d3104a6f75e4e8e0014
   verifyCutoff ::
     GHC.Base.Monad m =>
     Control.Monad.Trans.Either.EitherT a m a
@@ -3892,7 +3236,7 @@ b611d1e32c7780ac7aefabc5ac570560
                        (Search.verifyCutoff2 @ a)
                  } in
                  let {
-                   lvl56 :: a -> m (Data.Either.Either a a) {- Arity: 1 -}
+                   lvl58 :: a -> m (Data.Either.Either a a) {- Arity: 1 -}
                    = \ (x1 :: a) ->
                      GHC.Base.return
                        @ m
@@ -3908,7 +3252,7 @@ b611d1e32c7780ac7aefabc5ac570560
                     @ (Data.Either.Either a a)
                     (f x `cast`
                        (Control.Monad.Trans.Either.N:EitherT[0] <a>_N <m>_R <a>_N))
-                    lvl56)
+                    lvl58)
                    `cast`
                  (<Control.Monad.Trans.Either.EitherT a m a>_R
                   ->_R Sym (Control.Monad.Trans.Either.N:EitherT[0]
@@ -3942,73 +3286,6 @@ b611d1e32c7780ac7aefabc5ac570560
                                                                   $dApplicative
   = Search.$s$fApplicativeEitherT_$s$fApplicativeReaderT_$cp1Applicative
       @ r
-"SPEC/Search $fApplicativeStateT @ (ReaderT SearchEnvironment IO) _" [ALWAYS] forall @ s
-                                                                                     ($dFunctor :: GHC.Base.Functor
-                                                                                                     (Control.Monad.Trans.Reader.ReaderT
-                                                                                                        Search.SearchEnvironment
-                                                                                                        GHC.Types.IO))
-                                                                                     ($dMonad :: GHC.Base.Monad
-                                                                                                   (Control.Monad.Trans.Reader.ReaderT
-                                                                                                      Search.SearchEnvironment
-                                                                                                      GHC.Types.IO))
-  Control.Monad.Trans.State.Strict.$fApplicativeStateT @ (Control.Monad.Trans.Reader.ReaderT
-                                                            Search.SearchEnvironment GHC.Types.IO)
-                                                       @ s
-                                                       $dFunctor
-                                                       $dMonad
-  = Search.$s$fApplicativeEitherT_$s$fApplicativeStateT @ s
-"SPEC/Search $fApplicativeStateT_$c<*> @ (ReaderT
-                                           SearchEnvironment IO) _" [ALWAYS] forall @ s
-                                                                                                                                      ($dFunctor :: GHC.Base.Functor
-                                                                                                                                                      (Control.Monad.Trans.Reader.ReaderT
-                                                                                                                                                         Search.SearchEnvironment
-                                                                                                                                                         GHC.Types.IO))
-                                                                                                                                      ($dMonad :: GHC.Base.Monad
-                                                                                                                                                    (Control.Monad.Trans.Reader.ReaderT
-                                                                                                                                                       Search.SearchEnvironment
-                                                                                                                                                       GHC.Types.IO))
-  Control.Monad.Trans.State.Strict.$fApplicativeStateT_$c<*> @ (Control.Monad.Trans.Reader.ReaderT
-                                                                  Search.SearchEnvironment
-                                                                  GHC.Types.IO)
-                                                             @ s
-                                                             $dFunctor
-                                                             $dMonad
-  = Search.$s$fApplicativeEitherT_$s$fApplicativeStateT_$c<*> @ s
-"SPEC/Search $fApplicativeStateT_$cp1Applicative @ (ReaderT
-                                                     SearchEnvironment IO) _" [ALWAYS] forall @ s
-                                                                                                                                                          ($dFunctor :: GHC.Base.Functor
-                                                                                                                                                                          (Control.Monad.Trans.Reader.ReaderT
-                                                                                                                                                                             Search.SearchEnvironment
-                                                                                                                                                                             GHC.Types.IO))
-                                                                                                                                                          ($dMonad :: GHC.Base.Monad
-                                                                                                                                                                        (Control.Monad.Trans.Reader.ReaderT
-                                                                                                                                                                           Search.SearchEnvironment
-                                                                                                                                                                           GHC.Types.IO))
-  Control.Monad.Trans.State.Strict.$fApplicativeStateT_$cp1Applicative @ (Control.Monad.Trans.Reader.ReaderT
-                                                                            Search.SearchEnvironment
-                                                                            GHC.Types.IO)
-                                                                       @ s
-                                                                       $dFunctor
-                                                                       $dMonad
-  = Search.$s$fApplicativeEitherT_$s$fApplicativeStateT_$cp1Applicative
-      @ s
-"SPEC/Search $fApplicativeStateT_$cpure @ (ReaderT
-                                            SearchEnvironment IO) _" [ALWAYS] forall @ s
-                                                                                                                                        ($dFunctor :: GHC.Base.Functor
-                                                                                                                                                        (Control.Monad.Trans.Reader.ReaderT
-                                                                                                                                                           Search.SearchEnvironment
-                                                                                                                                                           GHC.Types.IO))
-                                                                                                                                        ($dMonad :: GHC.Base.Monad
-                                                                                                                                                      (Control.Monad.Trans.Reader.ReaderT
-                                                                                                                                                         Search.SearchEnvironment
-                                                                                                                                                         GHC.Types.IO))
-  Control.Monad.Trans.State.Strict.$fApplicativeStateT_$cpure @ (Control.Monad.Trans.Reader.ReaderT
-                                                                   Search.SearchEnvironment
-                                                                   GHC.Types.IO)
-                                                              @ s
-                                                              $dFunctor
-                                                              $dMonad
-  = Search.$s$fApplicativeEitherT_$s$fApplicativeStateT_$cpure @ s
 "SPEC/Search $fFunctorReaderT @ IO _" [ALWAYS] forall @ r
                                                       ($dFunctor :: GHC.Base.Functor GHC.Types.IO)
   Control.Monad.Trans.Reader.$fFunctorReaderT @ GHC.Types.IO
@@ -4029,28 +3306,6 @@ b611d1e32c7780ac7aefabc5ac570560
                                                      @ r
                                                      $dFunctor
   = Search.$s$fApplicativeEitherT_$s$fFunctorReaderT_$cfmap @ r
-"SPEC/Search $fFunctorStateT @ (ReaderT SearchEnvironment IO) _" [ALWAYS] forall @ s
-                                                                                 ($dFunctor :: GHC.Base.Functor
-                                                                                                 (Control.Monad.Trans.Reader.ReaderT
-                                                                                                    Search.SearchEnvironment
-                                                                                                    GHC.Types.IO))
-  Control.Monad.Trans.State.Strict.$fFunctorStateT @ (Control.Monad.Trans.Reader.ReaderT
-                                                        Search.SearchEnvironment GHC.Types.IO)
-                                                   @ s
-                                                   $dFunctor
-  = Search.$s$fApplicativeEitherT_$s$fFunctorStateT @ s
-"SPEC/Search $fFunctorStateT_$cfmap @ (ReaderT
-                                        SearchEnvironment IO) _" [ALWAYS] forall @ s
-                                                                                                                                ($dFunctor :: GHC.Base.Functor
-                                                                                                                                                (Control.Monad.Trans.Reader.ReaderT
-                                                                                                                                                   Search.SearchEnvironment
-                                                                                                                                                   GHC.Types.IO))
-  Control.Monad.Trans.State.Strict.$fFunctorStateT_$cfmap @ (Control.Monad.Trans.Reader.ReaderT
-                                                               Search.SearchEnvironment
-                                                               GHC.Types.IO)
-                                                          @ s
-                                                          $dFunctor
-  = Search.$s$fApplicativeEitherT_$s$fFunctorStateT_$cfmap @ s
 "SPEC/Search $fMonadReaderT @ IO _" [ALWAYS] forall @ r
                                                     ($dMonad :: GHC.Base.Monad GHC.Types.IO)
   Control.Monad.Trans.Reader.$fMonadReaderT @ GHC.Types.IO
@@ -4118,48 +3373,6 @@ b611d1e32c7780ac7aefabc5ac570560
                                                  @ s
                                                  $dMonad
   = Search.$s$fApplicativeEitherT_$s$fMonadStateT @ s
-"SPEC/Search $fMonadStateT_$c>> @ (ReaderT SearchEnvironment IO) _" [ALWAYS] forall @ s
-                                                                                    ($dMonad :: GHC.Base.Monad
-                                                                                                  (Control.Monad.Trans.Reader.ReaderT
-                                                                                                     Search.SearchEnvironment
-                                                                                                     GHC.Types.IO))
-  Control.Monad.Trans.State.Strict.$fMonadStateT_$c>> @ (Control.Monad.Trans.Reader.ReaderT
-                                                           Search.SearchEnvironment GHC.Types.IO)
-                                                      @ s
-                                                      $dMonad
-  = Search.$s$fApplicativeEitherT_$s$fMonadStateT_$c>> @ s
-"SPEC/Search $fMonadStateT_$c>>= @ (ReaderT SearchEnvironment IO) _" [ALWAYS] forall @ s
-                                                                                     ($dMonad :: GHC.Base.Monad
-                                                                                                   (Control.Monad.Trans.Reader.ReaderT
-                                                                                                      Search.SearchEnvironment
-                                                                                                      GHC.Types.IO))
-  Control.Monad.Trans.State.Strict.$fMonadStateT_$c>>= @ (Control.Monad.Trans.Reader.ReaderT
-                                                            Search.SearchEnvironment GHC.Types.IO)
-                                                       @ s
-                                                       $dMonad
-  = Search.$s$fApplicativeEitherT_$s$fMonadStateT_$c>>= @ s
-"SPEC/Search $fMonadStateT_$cfail @ (ReaderT SearchEnvironment IO) _" [ALWAYS] forall @ s
-                                                                                      ($dMonad :: GHC.Base.Monad
-                                                                                                    (Control.Monad.Trans.Reader.ReaderT
-                                                                                                       Search.SearchEnvironment
-                                                                                                       GHC.Types.IO))
-  Control.Monad.Trans.State.Strict.$fMonadStateT_$cfail @ (Control.Monad.Trans.Reader.ReaderT
-                                                             Search.SearchEnvironment GHC.Types.IO)
-                                                        @ s
-                                                        $dMonad
-  = Search.$s$fApplicativeEitherT_$s$fMonadStateT_$cfail @ s
-"SPEC/Search $fMonadStateT_$cp1Monad @ (ReaderT
-                                         SearchEnvironment IO) _" [ALWAYS] forall @ s
-                                                                                                                                  ($dMonad :: GHC.Base.Monad
-                                                                                                                                                (Control.Monad.Trans.Reader.ReaderT
-                                                                                                                                                   Search.SearchEnvironment
-                                                                                                                                                   GHC.Types.IO))
-  Control.Monad.Trans.State.Strict.$fMonadStateT_$cp1Monad @ (Control.Monad.Trans.Reader.ReaderT
-                                                                Search.SearchEnvironment
-                                                                GHC.Types.IO)
-                                                           @ s
-                                                           $dMonad
-  = Search.$s$fApplicativeEitherT_$s$fMonadStateT_$cp1Monad @ s
 "SPEC/Search $fMonadStatesStateT @ (ReaderT SearchEnvironment IO) _" [ALWAYS] forall @ s
                                                                                      ($dMonad :: GHC.Base.Monad
                                                                                                    (Control.Monad.Trans.Reader.ReaderT
