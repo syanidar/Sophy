@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-23 07:46:12.4501893 UTC
+2016-12-25 02:56:52.8086174 UTC
 
 interface Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet:Engine 8001
-  interface hash: 165832f9a1b2d844ca0f9e017e6206cd
-  ABI hash: 09d02c35c9a7b673cf17cab751a05810
+  interface hash: 3a0b11ec354eb1f200951b8455d91305
+  ABI hash: 1f81b170f6f50b0c6f807647dee60168
   export-list hash: 3377dd615a50415cf5e4f50fc192ea43
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 282ddb6f3a6e71876c9ed624527a08b1
@@ -187,6 +187,8 @@ import  -/  base-4.9.0.0:GHC.Base dd8044a8d640eee51828c17c476a6ba7
 import  -/  base-4.9.0.0:GHC.Conc.IO a4f5c846d1817845898e46b8578448aa
 import  -/  base-4.9.0.0:GHC.Conc.Sync a1292c872414656fef080815d5d8e73c
 import  -/  base-4.9.0.0:GHC.Err 20faef8829fd13c027d0ee2213637534
+import  -/  base-4.9.0.0:GHC.IO.Handle 0ec5f3e063751c91152d6f1b0286ca9a
+import  -/  base-4.9.0.0:GHC.IO.Handle.FD 5311a39f33255d27517e14bdb344dca6
 import  -/  base-4.9.0.0:GHC.Num f0aed3315b3ed1b330b71fc4148a5581
 import  -/  base-4.9.0.0:GHC.Real 011de9ca3282ad24a84e4e15f974f98e
 import  -/  base-4.9.0.0:Prelude 2d9cd8b0ec3d728f62b734df888d2e34
@@ -242,7 +244,7 @@ ede1309f903c3a8751b2223f36e93067
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet"#) -}
-3e822c5b958690b88d63cd35fc2e810d
+944de79322b199411714e3c07311128e
   $wshowResult ::
     Alias.Variation
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -258,26 +260,44 @@ ede1309f903c3a8751b2223f36e93067
                    : best ds
                    -> case ds of wild1 {
                         []
-                        -> GHC.IO.Handle.Text.hPutStr2
+                        -> case GHC.IO.Handle.Text.hPutStr2
+                                  GHC.IO.Handle.FD.stdout
+                                  (GHC.CString.unpackAppendCString# "bestmove "# (Move.toLAN best))
+                                  GHC.Types.True
+                                  w of ds1 { (#,#) ipv ipv1 ->
+                           GHC.IO.Handle.Internals.wantWritableHandle1
+                             @ ()
+                             GHC.IO.Handle.hFlush2
                              GHC.IO.Handle.FD.stdout
-                             (GHC.CString.unpackAppendCString# "bestmove "# (Move.toLAN best))
-                             GHC.Types.True
-                             w
+                             GHC.IO.Handle.Internals.flushWriteBuffer1
+                               `cast`
+                             (<GHC.IO.Handle.Types.Handle__>_R
+                              ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                             ipv }
                         : ponder ds1
-                        -> GHC.IO.Handle.Text.hPutStr2
+                        -> case GHC.IO.Handle.Text.hPutStr2
+                                  GHC.IO.Handle.FD.stdout
+                                  (GHC.CString.unpackAppendCString#
+                                     "bestmove "#
+                                     (case best of ww1 { GHC.Word.W16# ww2 ->
+                                      GHC.Base.++
+                                        @ GHC.Types.Char
+                                        (Move.$wtoLAN ww2)
+                                        (GHC.CString.unpackAppendCString#
+                                           " ponder "#
+                                           (case ponder of ww3 { GHC.Word.W16# ww4 ->
+                                            Move.$wtoLAN ww4 })) }))
+                                  GHC.Types.True
+                                  w of ds2 { (#,#) ipv ipv1 ->
+                           GHC.IO.Handle.Internals.wantWritableHandle1
+                             @ ()
+                             GHC.IO.Handle.hFlush2
                              GHC.IO.Handle.FD.stdout
-                             (GHC.CString.unpackAppendCString#
-                                "bestmove "#
-                                (case best of ww1 { GHC.Word.W16# ww2 ->
-                                 GHC.Base.++
-                                   @ GHC.Types.Char
-                                   (Move.$wtoLAN ww2)
-                                   (GHC.CString.unpackAppendCString#
-                                      " ponder "#
-                                      (case ponder of ww3 { GHC.Word.W16# ww4 ->
-                                       Move.$wtoLAN ww4 })) }))
-                             GHC.Types.True
-                             w } }) -}
+                             GHC.IO.Handle.Internals.flushWriteBuffer1
+                               `cast`
+                             (<GHC.IO.Handle.Types.Handle__>_R
+                              ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                             ipv } } }) -}
 ffc9693399d792f54359c828a310924c
   $wtimeoutFrom ::
     BasicData.Color
@@ -463,7 +483,7 @@ a6ab65dfc15cba757c48620622981880
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           ((), Engine.EngineState) #)
   {- Arity: 3, Strictness: <S,U><L,U><L,U> -}
-e5306c3046d280f461b67d0a2aca05c1
+1a598141e173882e32b0e2d488eabb45
   showResult ::
     (Alias.Evaluation, Search.SearchState) -> GHC.Types.IO ()
   {- Arity: 2, Strictness: <S(LS(LSL)),1*U(A,1*U(A,U,A))><S,U>,
@@ -472,7 +492,7 @@ e5306c3046d280f461b67d0a2aca05c1
                   `cast`
                 (<(Alias.Evaluation, Search.SearchState)>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-b57eb4f1e7bbd92f1c865715e3256c49
+efab3bfb72a5eb58571df3b8e6499afa
   showResult1 ::
     (Alias.Evaluation, Search.SearchState)
     -> GHC.Prim.State# GHC.Prim.RealWorld

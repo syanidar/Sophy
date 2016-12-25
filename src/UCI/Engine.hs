@@ -16,6 +16,7 @@ import Control.Lens
 import Control.Exception hiding(handle)
 import Control.Concurrent
 import Control.Concurrent.STM
+import System.IO
 
 data EngineState = EngineState {    _currentPosition    :: Maybe Position
                                 ,   _currentResult      :: TVar (Evaluation,SearchState)
@@ -42,9 +43,11 @@ handle UCI = do
     liftIO . putStrLn $ "id author Teguramori Ryo"
     -- options here
     liftIO . putStrLn $ "uciok"
+    liftIO . hFlush $ stdout
     waitInput
 handle IsReady = do
     liftIO . putStrLn $ "readyok"
+    liftIO . hFlush $ stdout
     waitInput
 handle (InPosition pos) = do
     modify' (currentPosition .~ Just pos)
@@ -77,8 +80,12 @@ handle Quit = return ()
 handle _ = waitInput
 
 showResult :: (Evaluation,SearchState) -> IO ()
-showResult (evaluation,SearchState{_variation = (best:ponder:_)}) = putStrLn $ "bestmove " ++ toLAN best ++ " ponder " ++ toLAN ponder
-showResult (evaluation,SearchState{_variation = (best:_)}) = putStrLn $ "bestmove " ++ toLAN best
+showResult (evaluation,SearchState{_variation = (best:ponder:_)}) = do
+    putStrLn $ "bestmove " ++ toLAN best ++ " ponder " ++ toLAN ponder
+    hFlush stdout
+showResult (evaluation,SearchState{_variation = (best:_)}) = do
+    putStrLn $ "bestmove " ++ toLAN best
+    hFlush stdout
 
 timeoutFrom :: Position -> [GoToken] -> Int
 timeoutFrom _ []                = error "No information about the remaining time."

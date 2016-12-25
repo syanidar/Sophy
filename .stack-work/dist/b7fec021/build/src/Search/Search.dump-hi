@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-23 07:46:03.8809821 UTC
+2016-12-25 02:56:49.277753 UTC
 
 interface Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet:Search 8001
-  interface hash: f09019375cd18514df09cd0f64e6d9e0
+  interface hash: 94892d3332fb397399d3927a7a8eff6a
   ABI hash: 3127de119458e89b815990ee38c14a7e
   export-list hash: 8cd0cb00fcc2320d71932da0e499c8e2
   orphan hash: 1185274e29d7af0441023b22e375ea81
@@ -230,6 +230,8 @@ import  -/  base-4.9.0.0:GHC.Err 20faef8829fd13c027d0ee2213637534
 import  -/  base-4.9.0.0:GHC.Exception c6c6865d3d26014bfd1ac2ce722cdb53
 import  -/  base-4.9.0.0:GHC.Float a46e197015eefaa013d7004e58481c54
 import  -/  base-4.9.0.0:GHC.IO 1429985c1cb03cc0778fa4876799f1d2
+import  -/  base-4.9.0.0:GHC.IO.Handle 0ec5f3e063751c91152d6f1b0286ca9a
+import  -/  base-4.9.0.0:GHC.IO.Handle.FD 5311a39f33255d27517e14bdb344dca6
 import  -/  base-4.9.0.0:GHC.IORef 6ac2f49b0185ee3e0f9801f489e4a880
 import  -/  base-4.9.0.0:GHC.List 47d436dfb7454bb1883fb4d943e3f389
 import  -/  base-4.9.0.0:GHC.Num f0aed3315b3ed1b330b71fc4148a5581

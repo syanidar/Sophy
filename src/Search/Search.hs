@@ -27,6 +27,7 @@ import qualified Control.Exception as E
 import Control.Concurrent
 import Control.Concurrent.STM
 import Control.Monad.Trans.Either
+import System.IO
 
 data HashEntry = HashEntry{     posId       :: ZobristKey
                             ,   priority    :: Depth
@@ -203,7 +204,7 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
     --  we could also narrow the window if the depth in which the position was stored in the table is deeper than that of the current position.
     entry   <- getHash position
     let hashMove        = intersect moves . maybeToList $ refutation =<< entry
-        (alpha',beta')  = updateBounds n alpha beta entry
+        (alpha',beta')  = if pvNode then (alpha, beta) else updateBounds n alpha beta entry
 
     when (alpha' >= beta') $ do
         setVariation hashMove
@@ -229,7 +230,7 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
     pvScore         <-  do
         let pvMove = head ordered
         score <- negate <$> negaScout (n - 1) (-beta') (-alpha') pvNode False (makeMove pvMove position)
-        when pvNode $ putMove pvMove
+        putMove pvMove
         putKiller n pvMove position
         when (score >= beta') $ cutoff score
         return score
@@ -239,29 +240,29 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
         negaScout' localAlpha moveCount (x:xs)  = do
             variation   <- clearVariation
 
-            let lowerBound  = max localAlpha alpha'
             score <- verifyCutoff $ do
                 unless (isTactical position x || isCheck position x || isInCheck position || pvNode) $ do
                     let reduction   = truncate $ sqrt (fromIntegral $ n - 1) + sqrt (fromIntegral $ moveCount - 1)
-                    lmrScore <- negate <$> negaScout (n - 1 - reduction) (-lowerBound - 1) (-lowerBound) False False (makeMove x position)
-                    when (lmrScore <= lowerBound) $ cutoff lmrScore
+                    lmrScore <- negate <$> negaScout (n - 1 - reduction) (-localAlpha - 1) (-localAlpha) False False (makeMove x position)
+                    when (lmrScore <= localAlpha) $ cutoff lmrScore
 
-                nwsScore <- negate <$> negaScout (n - 1) (-lowerBound - 1) (-lowerBound) False False (makeMove x position)
-                if lowerBound < nwsScore && nwsScore < beta'
-                then negate <$> negaScout (n - 1) (-beta') (-nwsScore) True False (makeMove x position)
+                nwsScore <- negate <$> negaScout (n - 1) (-localAlpha - 1) (-localAlpha) False False (makeMove x position)
+                if localAlpha < nwsScore && nwsScore < beta'
+                then negate <$> negaScout (n - 1) (-beta') (-localAlpha) True False (makeMove x position)
                 else return nwsScore
+
             if score >= beta'  then do
-                when pvNode $ putMove x
+                putMove x
                 putKiller n x position
                 return score
             else if score > localAlpha then do
-                when pvNode $ putMove x
+                putMove x
                 negaScout' score (moveCount + 1) xs
             else do
                 setVariation variation
                 negaScout' localAlpha (moveCount + 1) xs
 
-    score           <-  negaScout' pvScore 1 (tail ordered)
+    score           <-  negaScout' (max pvScore alpha') 1 (tail ordered)
     moveSelected    <-  getSelectedMove
 
     let sType   | score <= alpha'   = UpperBound
@@ -373,3 +374,4 @@ uciInfo n score position = do
         else "cp "      ++ show score
         matePly  = abs defeat - abs score - position ^. plyCount
     say $ "info depth " ++ show n ++ " nodes " ++ show nodes ++ " score " ++ scoreString ++ " pv " ++ unwords (map toLAN pv)
+    liftIO $ hFlush stdout

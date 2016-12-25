@@ -10,7 +10,6 @@ import Options
 import Data.Maybe
 import Data.Either
 import Control.Monad
-import System.IO
 
 data Mode   = Perft
             | SpeedTest
@@ -58,6 +57,4 @@ main = runCommand $ \opts args -> case mode opts of
     SpeedTest   -> speedtest (depth opts) (fen opts)
     Analyze     -> analyze (depth opts) (fen opts) (timeout opts)
     HashTest    -> hashKeyTest (depth opts) 100000
-    Engine      -> do
-        hSetBuffering stdout NoBuffering
-        launchEngine
+    Engine      -> launchEngine
