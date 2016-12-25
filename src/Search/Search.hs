@@ -194,9 +194,10 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
     --  Here is a big saving comes in. Null Move Pruning!!
     --  We don't try to null move if the evaluation of the current position is lower than beta, because it's unlikely to fail high in that case.
     unless (preventNullMove || pvNode || isInCheck position || endGame position) $ do
-        let standPad = evaluate position
-        when (standPad >= beta) $ do
-            score <- negate <$> negaScout (n - 3) (-beta) (-beta + 1) False True (pass position)
+        let eval = evaluate position
+        when (eval >= beta) $ do
+            let reduction = max 2 (n `div` 2)
+            score <- negate <$> negaScout (n - 1 - reduction) (-beta) (-beta + 1) False True (pass position)
             when (score >= beta) $ cutoff score
 
     --  We now refer to the previous evaluation of the same position stored in the hash table.
@@ -212,9 +213,9 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
 
     --  We could still get a good move ordering by getting the best move at a shallower depth even if we couldn't have obtained the hash move.
     --  This is what's called internal iterative deepning.
-    iidMove <- if null hashMove && n > 4 && pvNode
+    iidMove <- if null hashMove && n > 5 && pvNode
         then do
-            negaScout (n - 4) alpha' beta' True True position
+            negaScout (n `div` 2) alpha' beta' True True position
             result <- getSelectedMove
             clearVariation
             return $ maybeToList result

@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-25 05:34:26.2689327 UTC
+2016-12-25 08:57:27.2303308 UTC
 
 interface Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet:Analyze 8001
-  interface hash: 77358bdc4b65815147cea528262f9002
+  interface hash: a4075a34aa00bab3233ec7a0291ff8e8
   ABI hash: 1c73a63aaf2697d886d235eefd231c8a
   export-list hash: 4c061c026a2a64bfeb9d511560f586a0
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -141,11 +141,11 @@ import  -/  Move 44a778e409d712d8dcaf2c07d1b2800d
 import  -/  Position af8b43b323818dabb635634fc880445d
   exports: 0d659c33f0a366721f46836234c7b111
   showPos a6c0a3c076c8b731e1ef5a1924c94c9a
-import  -/  Search 554786cdc6fb98c264b6c47457f955c5
+import  -/  Search 3127de119458e89b815990ee38c14a7e
   exports: 8cd0cb00fcc2320d71932da0e499c8e2
   counter 2b279081d5f55b2392415f2690dde7eb
   environment a91616b2ab71c1cf4dc68a33c0bff84d
-  iddfs b17ee7b3cb6a4224d1d75ab6aed8c7e2
+  iddfs 1852af05e99ea6d2e9cffaf39822978c
   search 8a831325dc221b7e4f04be1b3220de4c
   variation 34730b1f4cdc0ab8c684f4d9d39b03e1
 import  -/  base-4.9.0.0:Control.Concurrent c3bd1c151fa27857a3c9d1db4bfc9ff7
