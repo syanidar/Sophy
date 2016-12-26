@@ -1,9 +1,0 @@
-[1 of 1] Compiling Main             ( C:\Users\PCUser\AppData\Local\Temp\stack1616\ghc-heap-view-0.5.7\Setup.hs, C:\Users\PCUser\AppData\Local\Temp\stack1616\ghc-heap-view-0.5.7\.stack-work\dist\b7fec021\setup\Main.o )
-Linking C:\Users\PCUser\AppData\Local\Temp\stack1616\ghc-heap-view-0.5.7\.stack-work\dist\b7fec021\setup\setup.exe ...
-Configuring ghc-heap-view-0.5.7...
-This library cannot be built using profiling. Try invoking cabal with the
---disable-library-profiling flag.
-CallStack (from HasCallStack):
-error, called at
-C:\Users\PCUser\AppData\Local\Temp\stack1616\ghc-heap-view-0.5.7\Setup.hs:22:16
-in main:Main
