@@ -47,9 +47,10 @@ data SearchEnvironment  = SearchEnvironment{
         _table          :: HashTable}
 makeLenses '' SearchEnvironment
 
-data NodeType = PV | Cut | All
-
 type Search = EitherT Evaluation (StateT SearchState (ReaderT SearchEnvironment IO))
+
+data NodeType = PV | NonPV deriving (Eq)
+data NullMoveAllowed = Allowed | Prevented deriving (Eq)
 
 search :: Search Evaluation -> SearchEnvironment -> IO (Evaluation,SearchState)
 search x = runReaderT (runStateT (either id id <$> runEitherT x) initSearchState)
@@ -161,8 +162,8 @@ verifyCutoff = lift . fmap (either id id) . runEitherT
 cutoff :: Monad m => e -> EitherT e m a
 cutoff = left
 
-negaScout :: Depth -> Alpha -> Beta -> Bool -> Bool -> Position -> Search Evaluation
-negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
+negaScout :: Depth -> Alpha -> Beta -> NodeType -> NullMoveAllowed -> Position -> Search Evaluation
+negaScout n alpha beta node nullMove position = verifyCutoff $ do
     let moves = legalMoves position
 
     --  One has to return either the mate score or the draw score(== 0) if there is no legal moves.
@@ -188,16 +189,16 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
     --  The reason why we extend such positions is that being in check means we are in a forcing sequence.
     --  Thus we want to know the outcome after the sequence rathar than the evaluation for the current situation.
     when (n <= 0) $ if isInCheck position
-        then cutoff =<< negaScout 1 alpha beta pvNode preventNullMove position
+        then cutoff =<< negaScout 1 alpha beta node nullMove position
         else cutoff =<< quiescence alpha beta position
 
     --  Here is a big saving comes in. Null Move Pruning!!
     --  We don't try to null move if the evaluation of the current position is lower than beta, because it's unlikely to fail high in that case.
-    unless (preventNullMove || pvNode || isInCheck position || endGame position) $ do
+    unless (nullMove == Prevented || node == PV || isInCheck position || endGame position) $ do
         let eval = evaluate position
         when (eval >= beta) $ do
             let reduction = max 2 (n `div` 2)
-            score <- negate <$> negaScout (n - 1 - reduction) (-beta) (-beta + 1) False True (pass position)
+            score <- negate <$> negaScout (n - 1 - reduction) (-beta) (-beta + 1) NonPV Prevented (pass position)
             when (score >= beta) $ cutoff score
 
     --  We now refer to the previous evaluation of the same position stored in the hash table.
@@ -205,7 +206,7 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
     --  we could also narrow the window if the depth in which the position was stored in the table is deeper than or equal to that of the current position.
     entry   <- getHash position
     let hashMove        = intersect moves . maybeToList $ refutation =<< entry
-        (alpha',beta')  = if pvNode then (alpha, beta) else updateBounds n alpha beta entry
+        (alpha',beta')  = if node == PV then (alpha, beta) else updateBounds n alpha beta entry
 
     when (alpha' >= beta') $ do
         setVariation hashMove
@@ -213,9 +214,9 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
 
     --  We could still get a good move ordering by getting the best move at a shallower depth even if we couldn't have obtained the hash move.
     --  This is what's called internal iterative deepning.
-    iidMove <- if null hashMove && n > 5 && pvNode
+    iidMove <- if null hashMove && n > 5 && node == PV
         then do
-            negaScout (n `div` 2) alpha' beta' True True position
+            negaScout (n `div` 2) alpha' beta' PV Prevented position
             result <- getSelectedMove
             clearVariation
             return $ maybeToList result
@@ -230,7 +231,7 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
     --  The leftmost nodes should always be searched with full window.
     pvScore         <-  do
         let pvMove = head ordered
-        score <- negate <$> negaScout (n - 1) (-beta') (-alpha') pvNode False (makeMove pvMove position)
+        score <- negate <$> negaScout (n - 1) (-beta') (-alpha') node Allowed (makeMove pvMove position)
         putMove pvMove
         putKiller n pvMove position
         when (score >= beta') $ cutoff score
@@ -246,14 +247,14 @@ negaScout n alpha beta pvNode preventNullMove position = verifyCutoff $ do
             score <- verifyCutoff $ do
                 --  If we are not in the pv node i.e. we are not interested in the minimax value of the position, we could reduce the search depth of later moves without significant loss of accuracy.
                 --  This is how late move reduction(LMR) works.
-                unless (isTactical position x || isCheck position x || isInCheck position || pvNode) $ do
+                unless (isTactical position x || isCheck position x || isInCheck position || node == PV) $ do
                     let reduction   = truncate $ sqrt (fromIntegral $ n - 1) + sqrt (fromIntegral $ moveCount - 1)
-                    lmrScore <- negate <$> negaScout (n - 1 - reduction) (-localAlpha - 1) (-localAlpha) False False (makeMove x position)
+                    lmrScore <- negate <$> negaScout (n - 1 - reduction) (-localAlpha - 1) (-localAlpha) NonPV Allowed (makeMove x position)
                     when (lmrScore <= localAlpha) $ cutoff lmrScore
 
-                nwsScore <- negate <$> negaScout (n - 1) (-localAlpha - 1) (-localAlpha) False False (makeMove x position)
+                nwsScore <- negate <$> negaScout (n - 1) (-localAlpha - 1) (-localAlpha) NonPV Allowed (makeMove x position)
                 if localAlpha < nwsScore && nwsScore < beta'
-                then negate <$> negaScout (n - 1) (-beta') (-localAlpha) True False (makeMove x position)
+                then negate <$> negaScout (n - 1) (-beta') (-localAlpha) PV Allowed (makeMove x position)
                 else return nwsScore
 
             if score >= beta'  then do
@@ -342,7 +343,7 @@ mtdf n firstGuess position = mtdf' firstGuess minEval maxEval
         mtdf' guess lower upper
             | lower < upper = do
                 let beta = max (lower + 1) guess
-                eval <- negaScout n (beta - 1) beta True False position
+                eval <- negaScout n (beta - 1) beta PV Allowed position
                 if eval < beta
                 then mtdf' eval lower eval
                 else mtdf' eval eval upper
@@ -352,7 +353,7 @@ aspirationSearch :: Depth -> Evaluation -> Position -> Search Evaluation
 aspirationSearch n guess position = aspire (guess - 25) (guess + 25)
     where
         aspire lower upper = do
-            eval <- negaScout n lower upper True False position
+            eval <- negaScout n lower upper PV Allowed position
             let size = upper - lower
             if eval >= upper         then   aspire lower (upper + size)
             else if eval <= lower    then   aspire (lower - size) upper

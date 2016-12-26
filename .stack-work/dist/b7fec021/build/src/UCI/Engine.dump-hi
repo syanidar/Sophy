@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-25 16:48:26.0445858 UTC
+2016-12-26 10:31:11.6829185 UTC
 
 interface Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet:Engine 8001
-  interface hash: 3a0b11ec354eb1f200951b8455d91305
+  interface hash: f94c3e59e4e38f0e2adb2df2ee035cfc
   ABI hash: 1f81b170f6f50b0c6f807647dee60168
   export-list hash: 3377dd615a50415cf5e4f50fc192ea43
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -153,13 +153,13 @@ import  -/  Position af8b43b323818dabb635634fc880445d
   exports: 0d659c33f0a366721f46836234c7b111
   isBlack be3e5f346008a44f6965206327605b31
   isWhite 105d25cf601ec514e78d347a5c5a0d36
-import  -/  Search 3127de119458e89b815990ee38c14a7e
-  exports: 8cd0cb00fcc2320d71932da0e499c8e2
+import  -/  Search 26916150c68bf085ac5a231c95500ed5
+  exports: ff193e662037fb33f065ef432a265382
   SearchState e2bd12e26736a8391ce0528b6cb64175
   SearchState bee4681d93c681361a0d14b96a952fc5
   _variation a76b29105e6d49fa705457587502065d
   environment a91616b2ab71c1cf4dc68a33c0bff84d
-  iddfs 1852af05e99ea6d2e9cffaf39822978c
+  iddfs 449915d388ce3b279109476853e87808
   search 8a831325dc221b7e4f04be1b3220de4c
 import  -/  UCIData e12aa0037614391ae8459fe073d35b1d
   exports: 073589906e6ccb158a796f12bd3be184

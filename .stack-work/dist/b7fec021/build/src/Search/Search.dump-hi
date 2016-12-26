@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-25 16:48:24.1160917 UTC
+2016-12-26 10:31:08.5283153 UTC
 
 interface Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet:Search 8001
-  interface hash: 487dc7d2466ec48578f17a7d31fe4f58
-  ABI hash: 3127de119458e89b815990ee38c14a7e
-  export-list hash: 8cd0cb00fcc2320d71932da0e499c8e2
+  interface hash: ee65d9e99b55ed3eb57e5db3d4ab213c
+  ABI hash: 26916150c68bf085ac5a231c95500ed5
+  export-list hash: ff193e662037fb33f065ef432a265382
   orphan hash: 1185274e29d7af0441023b22e375ea81
   flag hash: 3191267f49135665ab03a7886aa47ab0
   sig of: Nothing
@@ -51,7 +51,8 @@ exports:
   Search.verifyCutoff
   Search.HashEntry{Search.HashEntry posId priority refutation score scoreType}
   Search.HashTable
-  Search.NodeType{Search.All Search.Cut Search.PV}
+  Search.NodeType{Search.NonPV Search.PV}
+  Search.NullMoveAllowed{Search.Allowed Search.Prevented}
   Search.Search
   Search.SearchEnvironment{Search.SearchEnvironment _table}
   Search.SearchState{Search.SearchState _counter _killers _variation}
@@ -261,6 +262,79 @@ import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Class 
 import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Reader 756452dbc99b10a10b52491debebc1d0
 import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.State.Strict b8fa87c41e99462c4ab440d6e4b4ef5b
 import  -/  vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Mutable a270ee5ace70125b65106211782615b9
+97e897bf306efb1d28bb6e13c2ea6ada
+  $fEqNodeType :: GHC.Classes.Eq Search.NodeType
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Search.NodeType
+                  Search.$fEqNodeType_$c==
+                  Search.$fEqNodeType_$c/= -}
+97e897bf306efb1d28bb6e13c2ea6ada
+  $fEqNodeType_$c/= ::
+    Search.NodeType -> Search.NodeType -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Search.NodeType) (b :: Search.NodeType) ->
+                 case a of wild {
+                   Search.PV
+                   -> case b of wild1 {
+                        Search.PV -> GHC.Types.False Search.NonPV -> GHC.Types.True }
+                   Search.NonPV
+                   -> case b of wild1 {
+                        Search.PV -> GHC.Types.True Search.NonPV -> GHC.Types.False } }) -}
+97e897bf306efb1d28bb6e13c2ea6ada
+  $fEqNodeType_$c== ::
+    Search.NodeType -> Search.NodeType -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: Search.NodeType) (ds1 :: Search.NodeType) ->
+                 case ds of wild {
+                   Search.PV
+                   -> case ds1 of wild1 {
+                        Search.PV -> GHC.Types.True Search.NonPV -> GHC.Types.False }
+                   Search.NonPV
+                   -> case ds1 of wild1 {
+                        Search.PV -> GHC.Types.False Search.NonPV -> GHC.Types.True } }) -}
+6d0364654a40ddb8e6922bde097e6073
+  $fEqNullMoveAllowed :: GHC.Classes.Eq Search.NullMoveAllowed
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Search.NullMoveAllowed
+                  Search.$fEqNullMoveAllowed_$c==
+                  Search.$fEqNullMoveAllowed_$c/= -}
+6d0364654a40ddb8e6922bde097e6073
+  $fEqNullMoveAllowed_$c/= ::
+    Search.NullMoveAllowed -> Search.NullMoveAllowed -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Search.NullMoveAllowed) (b :: Search.NullMoveAllowed) ->
+                 case a of wild {
+                   Search.Allowed
+                   -> case b of wild1 {
+                        Search.Allowed -> GHC.Types.False
+                        Search.Prevented -> GHC.Types.True }
+                   Search.Prevented
+                   -> case b of wild1 {
+                        Search.Allowed -> GHC.Types.True
+                        Search.Prevented -> GHC.Types.False } }) -}
+6d0364654a40ddb8e6922bde097e6073
+  $fEqNullMoveAllowed_$c== ::
+    Search.NullMoveAllowed -> Search.NullMoveAllowed -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: Search.NullMoveAllowed)
+                   (ds1 :: Search.NullMoveAllowed) ->
+                 case ds of wild {
+                   Search.Allowed
+                   -> case ds1 of wild1 {
+                        Search.Allowed -> GHC.Types.True
+                        Search.Prevented -> GHC.Types.False }
+                   Search.Prevented
+                   -> case ds1 of wild1 {
+                        Search.Allowed -> GHC.Types.False
+                        Search.Prevented -> GHC.Types.True } }) -}
 c46648db375628364b747067fc96ebec
   $s$fApplicativeEitherT1 ::
     GHC.Base.Monad
@@ -1432,30 +1506,18 @@ af5d9ffd498c86f72989570189d2883a
   $sunless2 :: Data.Either.Either GHC.Types.Int ()
   {- HasNoCafRefs,
      Unfolding: (Data.Either.Right @ GHC.Types.Int @ () GHC.Tuple.()) -}
-7f710548ef643383a754d412b00f1fa6
-  $tc'All :: GHC.Types.TyCon
+27ab52d3d93a75d8f5690686d52761aa
+  $tc'Allowed :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   18034419245195623689##
-                   8305815477659204294##
+                   12245435152473733250##
+                   9940359326247941360##
                    Search.$trModule
-                   Search.$tc'All1) -}
-2d4c08af00cde4abc0815a1bb6532fd3
-  $tc'All1 :: GHC.Types.TrName
+                   Search.$tc'Allowed1) -}
+4eb19339850900b58f7bd335045fe98a
+  $tc'Allowed1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "'All"#) -}
-4578b78ff7e8da8113187ad1f726b799
-  $tc'Cut :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   12523559046157304627##
-                   7285844165122337448##
-                   Search.$trModule
-                   Search.$tc'Cut1) -}
-add25e0663cc083343ebf2ea88fe1847
-  $tc'Cut1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "'Cut"#) -}
+     Unfolding: (GHC.Types.TrNameS "'Allowed"#) -}
 ee147fa410f8a79b9367758ebe2af0e0
   $tc'HashEntry :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -1468,6 +1530,18 @@ ee147fa410f8a79b9367758ebe2af0e0
   $tc'HashEntry1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'HashEntry"#) -}
+c7080cfc4a2534b1bd0b6ceaba6a2108
+  $tc'NonPV :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2699594638268125065##
+                   5720530021149406522##
+                   Search.$trModule
+                   Search.$tc'NonPV1) -}
+ce094c61e2b7e1863e79cfe077db334a
+  $tc'NonPV1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'NonPV"#) -}
 414daaa5d3998e33890f4147d02c7412
   $tc'PV :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -1480,6 +1554,18 @@ e0a6e9eb69a570f74294b14b190e9f32
   $tc'PV1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'PV"#) -}
+f9ce70e04a05cc602b84b2c7f06dff4a
+  $tc'Prevented :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10807756674135379847##
+                   3175531904668149686##
+                   Search.$trModule
+                   Search.$tc'Prevented1) -}
+8614bf98b76e5828583570fd0accf94f
+  $tc'Prevented1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Prevented"#) -}
 f9106c91fe09362329d056fe95225075
   $tc'SearchEnvironment :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -1528,6 +1614,18 @@ e793f56207697c2ec0772f81df971a17
   $tcNodeType1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "NodeType"#) -}
+6860912c4fa457001aa591ef0f26ec77
+  $tcNullMoveAllowed :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13313987977559695865##
+                   4481603954515839533##
+                   Search.$trModule
+                   Search.$tcNullMoveAllowed1) -}
+69710c155356e679d29e3f74719485e6
+  $tcNullMoveAllowed1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "NullMoveAllowed"#) -}
 edcec533666f5b3a973daf349a288c80
   $tcSearchEnvironment :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -1607,7 +1705,7 @@ f3ec38ee4e831b0101f8c33705c1aeac
                            (Data.Vector.Mutable.MVector
                               (Control.Monad.Primitive.D:R:PrimStateIO[0])
                               <Search.HashEntry>_R)_R #) } }) -}
-c4a4fdc923dc3fac6fa208cc35392095
+8a9adeda748b76e3404c8eb695c72d26
   $widdfs ::
     GHC.Base.Maybe
       (GHC.Conc.Sync.TVar (Alias.Evaluation, Search.SearchState))
@@ -1970,8 +2068,10 @@ e6adbd7241e1571b594468906e18e302
                  refutation :: !GHC.Base.Maybe Alias.Move}
 cd372da23dcb91760ac797395c106342
   type HashTable = Data.Vector.Mutable.IOVector Search.HashEntry
-5e572ef2c513cfcf46fdf03016f75de2
-  data NodeType = PV | Cut | All
+97e897bf306efb1d28bb6e13c2ea6ada
+  data NodeType = PV | NonPV
+6d0364654a40ddb8e6922bde097e6073
+  data NullMoveAllowed = Allowed | Prevented
 275432fedf5e3c49077875109c9c6cd6
   type Search =
     Control.Monad.Trans.Either.EitherT
@@ -2090,7 +2190,7 @@ f7768fbf09609d450ace4f8b6ac5a325
                  (# s2#,
                     (Data.Either.Right @ GHC.Types.Int @ () GHC.Tuple.(),
                      eta1) #) } } } }) -}
-036a8dba9545a03b141ea3e0cdd5cc01
+bfa9d6a19e6385a8404f62e04df1f401
   aspirationSearch ::
     Alias.Depth
     -> Alias.Evaluation
@@ -2143,13 +2243,7 @@ f7768fbf09609d450ace4f8b6ac5a325
                      } in
                      let {
                        m1 :: Search.Search Alias.Evaluation
-                       = Search.negaScout
-                           n
-                           lower
-                           upper
-                           GHC.Types.True
-                           GHC.Types.False
-                           position
+                       = Search.negaScout n lower upper Search.PV Search.Allowed position
                      } in
                      (\ (s1 :: Search.SearchState) ->
                       let {
@@ -3113,7 +3207,7 @@ f90da9e077b805d955c196dbec9788cd
                        @ Alias.Variation
                        (case s1 of wild { Search.SearchState dt ds ds1 -> ds }),
                      s1) #)) -}
-1852af05e99ea6d2e9cffaf39822978c
+449915d388ce3b279109476853e87808
   iddfs ::
     Alias.Depth
     -> GHC.Base.Maybe
@@ -3255,13 +3349,13 @@ bae99368300a021971cca3f78745b9da
     -> Search.Search Alias.Evaluation
   {- Arity: 3,
      Strictness: <L,U(U)><L,U(U)><L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)> -}
-d6e39bf812f0b8ab3e74968d09e2f573
+9a5531c6329ad12a7087bb3087f20ec7
   negaScout ::
     Alias.Depth
     -> Alias.Alpha
     -> Alias.Beta
-    -> GHC.Types.Bool
-    -> GHC.Types.Bool
+    -> Search.NodeType
+    -> Search.NullMoveAllowed
     -> BasicData.Position
     -> Search.Search Alias.Evaluation
   {- Arity: 6,
@@ -3920,6 +4014,9 @@ b611d1e32c7780ac7aefabc5ac570560
                 (\ @ a (ds1 :: Data.Either.Either a a) ->
                  case ds1 of wild {
                    Data.Either.Left x -> x Data.Either.Right y -> y }) -}
+instance GHC.Classes.Eq [Search.NodeType] = Search.$fEqNodeType
+instance GHC.Classes.Eq [Search.NullMoveAllowed]
+  = Search.$fEqNullMoveAllowed
 "SPEC/Search $fApplicativeReaderT @ IO _" [ALWAYS] forall @ r
                                                           ($dApplicative :: GHC.Base.Applicative
                                                                               GHC.Types.IO)
