@@ -1,24 +1,21 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-26 10:31:08.5283153 UTC
+2016-12-26 23:01:09.5385321 UTC
 
 interface Sophy-0.1.0.0-KzkJ0b2opaf7oLnrOdwoet:Search 8001
-  interface hash: ee65d9e99b55ed3eb57e5db3d4ab213c
-  ABI hash: 26916150c68bf085ac5a231c95500ed5
-  export-list hash: ff193e662037fb33f065ef432a265382
+  interface hash: c49490bf30511715949d2ae39a80a05f
+  ABI hash: 5168c378d8fd78af027ff09b021f0982
+  export-list hash: 86cc9e73f9639c652895ec051ce24c1c
   orphan hash: 1185274e29d7af0441023b22e375ea81
   flag hash: 3191267f49135665ab03a7886aa47ab0
   sig of: Nothing
   used TH splices: True
   where
 exports:
-  Search.apply
   Search.aspirationSearch
-  Search.assign
   Search.clearVariation
   Search.counter
   Search.cutoff
-  Search.declare
   Search.defeat
   Search.environment
   Search.getHash
@@ -38,7 +35,6 @@ exports:
   Search.putKiller
   Search.putMove
   Search.quiescence
-  Search.refer
   Search.samePos
   Search.say
   Search.search
@@ -233,7 +229,6 @@ import  -/  base-4.9.0.0:GHC.Float a46e197015eefaa013d7004e58481c54
 import  -/  base-4.9.0.0:GHC.IO 1429985c1cb03cc0778fa4876799f1d2
 import  -/  base-4.9.0.0:GHC.IO.Handle 0ec5f3e063751c91152d6f1b0286ca9a
 import  -/  base-4.9.0.0:GHC.IO.Handle.FD 5311a39f33255d27517e14bdb344dca6
-import  -/  base-4.9.0.0:GHC.IORef 6ac2f49b0185ee3e0f9801f489e4a880
 import  -/  base-4.9.0.0:GHC.List 47d436dfb7454bb1883fb4d943e3f389
 import  -/  base-4.9.0.0:GHC.Num f0aed3315b3ed1b330b71fc4148a5581
 import  -/  base-4.9.0.0:GHC.Real 011de9ca3282ad24a84e4e15f974f98e
@@ -1502,9 +1497,9 @@ af5d9ffd498c86f72989570189d2883a
                       @ ()
                       Search.$s$fApplicativeEitherT1)
                    (\ (ds :: s) -> (GHC.Tuple.(), s1))) -}
-991e82e60750d0928086543adf3bd41c
-  $sunless2 :: Data.Either.Either GHC.Types.Int ()
-  {- HasNoCafRefs,
+234205771239fa9acef7a4f7bb8610b8
+  $sunless_eta :: Data.Either.Either GHC.Types.Int ()
+  {- HasNoCafRefs, Strictness: m2,
      Unfolding: (Data.Either.Right @ GHC.Types.Int @ () GHC.Tuple.()) -}
 27ab52d3d93a75d8f5690686d52761aa
   $tc'Allowed :: GHC.Types.TyCon
@@ -1938,7 +1933,7 @@ f3ec38ee4e831b0101f8c33705c1aeac
                        @ (GHC.Base.Maybe Search.HashEntry)
                        ipv1,
                      w2) #) }) -}
-31606f8118f1aa06f7c186aebfa4e964
+0070288bd0915aed716bb4f80dd97796
   $wputKiller ::
     Alias.Depth
     -> GHC.Prim.Word# -> BasicData.Position -> Search.Search ()
@@ -2119,77 +2114,6 @@ a76b29105e6d49fa705457587502065d
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Search.SearchState) ->
                  case ds of wild { Search.SearchState dt ds1 ds2 -> ds1 }) -}
-006a6a484c46705ac6dc34740be657c7
-  apply :: (a -> a) -> GHC.IORef.IORef a -> Search.Search ()
-  {- Arity: 5, HasNoCafRefs,
-     Strictness: <C(S),1*C1(U)><S(S),1*U(U)><L,U><L,A><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Search.apply1
-                  `cast`
-                (forall (a :: <*>_N).
-                 <a -> a>_R
-                 ->_R <GHC.IORef.IORef a>_R
-                 ->_R Trans
-                          (<Search.SearchState>_R
-                           ->_R Trans
-                                    (<Search.SearchEnvironment>_R
-                                     ->_R Sym (GHC.Types.N:IO[0]
-                                                   <(Data.Either.Either GHC.Types.Int (),
-                                                     Search.SearchState)>_R))
-                                    (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                              <*>_N
-                                              <Search.SearchEnvironment>_R
-                                              <GHC.Types.IO>_R
-                                              <(Data.Either.Either GHC.Types.Int (),
-                                                Search.SearchState)>_N)))
-                          (Trans
-                               (Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                         <Search.SearchState>_N
-                                         <Control.Monad.Trans.Reader.ReaderT
-                                            Search.SearchEnvironment GHC.Types.IO>_R
-                                         <Data.Either.Either GHC.Types.Int ()>_N))
-                               (Sym (Control.Monad.Trans.Either.N:EitherT[0]
-                                         <GHC.Types.Int>_N
-                                         <Control.Monad.Trans.State.Strict.StateT
-                                            Search.SearchState
-                                            (Control.Monad.Trans.Reader.ReaderT
-                                               Search.SearchEnvironment GHC.Types.IO)>_R
-                                         <()>_N)))) -}
-f7768fbf09609d450ace4f8b6ac5a325
-  apply1 ::
-    (a -> a)
-    -> GHC.IORef.IORef a
-    -> Search.SearchState
-    -> Search.SearchEnvironment
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          (Data.Either.Either GHC.Types.Int (), Search.SearchState) #)
-  {- Arity: 5, HasNoCafRefs,
-     Strictness: <C(S),1*C1(U)><S(S),1*U(U)><L,U><L,A><S,U>,
-     Unfolding: InlineRule (5, True, False)
-                (\ @ a
-                   (x :: a -> a)
-                   (y :: GHC.IORef.IORef a)
-                   (eta1 :: Search.SearchState)
-                   (eta2 :: Search.SearchEnvironment)
-                   (eta3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case y `cast`
-                      (GHC.IORef.N:IORef[0] <a>_N) of wild { GHC.STRef.STRef var# ->
-                 case GHC.Prim.readMutVar#
-                        @ GHC.Prim.RealWorld
-                        @ a
-                        var#
-                        eta3 of ds1 { (#,#) ipv ipv1 ->
-                 case x ipv1 of x' { DEFAULT ->
-                 case GHC.Prim.writeMutVar#
-                        @ GHC.Prim.RealWorld
-                        @ a
-                        var#
-                        x'
-                        ipv of s2# { DEFAULT ->
-                 (# s2#,
-                    (Data.Either.Right @ GHC.Types.Int @ () GHC.Tuple.(),
-                     eta1) #) } } } }) -}
 bfa9d6a19e6385a8404f62e04df1f401
   aspirationSearch ::
     Alias.Depth
@@ -2393,71 +2317,6 @@ bfa9d6a19e6385a8404f62e04df1f401
                     GHC.Types.I# (GHC.Prim.-# x 25#) })
                    (case guess of wild { GHC.Types.I# x ->
                     GHC.Types.I# (GHC.Prim.+# x 25#) })) -}
-a624657d1301799dff5077e6df03579d
-  assign :: GHC.IORef.IORef a -> a -> Search.Search ()
-  {- Arity: 5, HasNoCafRefs,
-     Strictness: <S(S),1*U(U)><L,U><L,U><L,A><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Search.assign1
-                  `cast`
-                (forall (a :: <*>_N).
-                 <GHC.IORef.IORef a>_R
-                 ->_R <a>_R
-                 ->_R Trans
-                          (<Search.SearchState>_R
-                           ->_R Trans
-                                    (<Search.SearchEnvironment>_R
-                                     ->_R Sym (GHC.Types.N:IO[0]
-                                                   <(Data.Either.Either GHC.Types.Int (),
-                                                     Search.SearchState)>_R))
-                                    (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                              <*>_N
-                                              <Search.SearchEnvironment>_R
-                                              <GHC.Types.IO>_R
-                                              <(Data.Either.Either GHC.Types.Int (),
-                                                Search.SearchState)>_N)))
-                          (Trans
-                               (Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                         <Search.SearchState>_N
-                                         <Control.Monad.Trans.Reader.ReaderT
-                                            Search.SearchEnvironment GHC.Types.IO>_R
-                                         <Data.Either.Either GHC.Types.Int ()>_N))
-                               (Sym (Control.Monad.Trans.Either.N:EitherT[0]
-                                         <GHC.Types.Int>_N
-                                         <Control.Monad.Trans.State.Strict.StateT
-                                            Search.SearchState
-                                            (Control.Monad.Trans.Reader.ReaderT
-                                               Search.SearchEnvironment GHC.Types.IO)>_R
-                                         <()>_N)))) -}
-73124518bd85e6593194969ccadcff44
-  assign1 ::
-    GHC.IORef.IORef a
-    -> a
-    -> Search.SearchState
-    -> Search.SearchEnvironment
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          (Data.Either.Either GHC.Types.Int (), Search.SearchState) #)
-  {- Arity: 5, HasNoCafRefs,
-     Strictness: <S(S),1*U(U)><L,U><L,U><L,A><S,U>,
-     Unfolding: InlineRule (5, True, False)
-                (\ @ a
-                   (x :: GHC.IORef.IORef a)
-                   (y :: a)
-                   (eta1 :: Search.SearchState)
-                   (eta2 :: Search.SearchEnvironment)
-                   (eta3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case x `cast`
-                      (GHC.IORef.N:IORef[0] <a>_N) of wild { GHC.STRef.STRef var# ->
-                 case GHC.Prim.writeMutVar#
-                        @ GHC.Prim.RealWorld
-                        @ a
-                        var#
-                        y
-                        eta3 of s2# { DEFAULT ->
-                 (# s2#,
-                    (Data.Either.Right @ GHC.Types.Int @ () GHC.Tuple.(),
-                     eta1) #) } }) -}
 c5c3a075a080abf6744b99ea5934a4e4
   clearVariation :: Search.Search Alias.Variation
   {- Arity: 3, Strictness: <L,U(U,U,U)><L,U><S,U>,
@@ -2596,71 +2455,6 @@ dc856a2cce2acbe6621618b77b0104f1
      Strictness: <S(LLLC(S)L),1*U(A,A,A,1*C1(U),A)><L,U>,
      Unfolding: InlineRule (0, True, True)
                 Control.Monad.Trans.Either.left -}
-b644aaebef29f7658bfbc1e0bb7007df
-  declare :: a -> Search.Search (GHC.IORef.IORef a)
-  {- Arity: 4, HasNoCafRefs, Strictness: <L,U><L,U><L,A><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Search.declare1
-                  `cast`
-                (forall (a :: <*>_N).
-                 <a>_R
-                 ->_R Trans
-                          (<Search.SearchState>_R
-                           ->_R Trans
-                                    (<Search.SearchEnvironment>_R
-                                     ->_R Sym (GHC.Types.N:IO[0]
-                                                   <(Data.Either.Either
-                                                       GHC.Types.Int (GHC.IORef.IORef a),
-                                                     Search.SearchState)>_R))
-                                    (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                              <*>_N
-                                              <Search.SearchEnvironment>_R
-                                              <GHC.Types.IO>_R
-                                              <(Data.Either.Either
-                                                  GHC.Types.Int (GHC.IORef.IORef a),
-                                                Search.SearchState)>_N)))
-                          (Trans
-                               (Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                         <Search.SearchState>_N
-                                         <Control.Monad.Trans.Reader.ReaderT
-                                            Search.SearchEnvironment GHC.Types.IO>_R
-                                         <Data.Either.Either GHC.Types.Int (GHC.IORef.IORef a)>_N))
-                               (Sym (Control.Monad.Trans.Either.N:EitherT[0]
-                                         <GHC.Types.Int>_N
-                                         <Control.Monad.Trans.State.Strict.StateT
-                                            Search.SearchState
-                                            (Control.Monad.Trans.Reader.ReaderT
-                                               Search.SearchEnvironment GHC.Types.IO)>_R
-                                         <GHC.IORef.IORef a>_N)))) -}
-8fcb53154b9039be3c5d601b04821b69
-  declare1 ::
-    a
-    -> Search.SearchState
-    -> Search.SearchEnvironment
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          (Data.Either.Either GHC.Types.Int (GHC.IORef.IORef a),
-           Search.SearchState) #)
-  {- Arity: 4, HasNoCafRefs, Strictness: <L,U><L,U><L,A><S,U>,
-     Unfolding: InlineRule (4, True, False)
-                (\ @ a
-                   (x :: a)
-                   (eta1 :: Search.SearchState)
-                   (eta2 :: Search.SearchEnvironment)
-                   (eta3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newMutVar#
-                        @ a
-                        @ GHC.Prim.RealWorld
-                        x
-                        eta3 of ds { (#,#) ipv ipv1 ->
-                 (# ipv,
-                    (Data.Either.Right
-                       @ GHC.Types.Int
-                       @ (GHC.IORef.IORef a)
-                       (GHC.STRef.STRef @ GHC.Prim.RealWorld @ a ipv1)
-                         `cast`
-                       (Sym (GHC.IORef.N:IORef[0]) <a>_N),
-                     eta1) #) }) -}
 8516e6688facb8408d613be44f7277e4
   defeat :: Alias.Evaluation
   {- HasNoCafRefs, Strictness: m,
@@ -3376,7 +3170,7 @@ fe5eef1a7dd60e0002cc3c763e11c9ea
                 (\ (ds :: Search.HashEntry) ->
                  case ds of wild { Search.HashEntry dt dt1 dt2 ds1 ds2 ->
                  GHC.Types.I# dt1 }) -}
-341eb5b84f6844d3f599d9f3bcf67dfb
+921bae9117278fc61f4c77f202f76040
   putHash ::
     BasicData.Position
     -> GHC.Base.Maybe Search.HashEntry
@@ -3403,7 +3197,7 @@ fe5eef1a7dd60e0002cc3c763e11c9ea
                                        (Control.Monad.Trans.Reader.ReaderT
                                           Search.SearchEnvironment GHC.Types.IO)>_R
                                     <()>_N))) -}
-45afe2dbb678c2058aadfa06147d014f
+5d3867ff7764493af039f77459550781
   putHash1 ::
     BasicData.Position
     -> GHC.Base.Maybe Search.HashEntry
@@ -3513,7 +3307,7 @@ fe5eef1a7dd60e0002cc3c763e11c9ea
                             (# s'#
                                  `cast`
                                (GHC.Prim.State# (Control.Monad.Primitive.D:R:PrimStateIO[0]))_R,
-                               (Search.$sunless2, s'1) #) } } } } } } } } })
+                               (Search.$sunless_eta, s'1) #) } } } } } } } } })
                    `cast`
                  (Trans
                       (<Search.SearchEnvironment>_R
@@ -3525,7 +3319,7 @@ fe5eef1a7dd60e0002cc3c763e11c9ea
                                 <GHC.Types.IO>_R
                                 <(Data.Either.Either GHC.Types.Int (),
                                   Search.SearchState)>_N)))) -}
-cbaa6bc8cea9bc9e9f143f9c647f7e1f
+4cb47964dd6a22a92a93925ffc3c5dab
   putKiller ::
     Alias.Depth -> Alias.Move -> BasicData.Position -> Search.Search ()
   {- Arity: 3,
@@ -3540,7 +3334,7 @@ cbaa6bc8cea9bc9e9f143f9c647f7e1f
 80890d6ccb276111c66fa50b65e25e52
   putKiller1 :: GHC.Base.Maybe [Alias.Move]
   {- Strictness: x -}
-ae86cc37c72a79aca491bd5e60930948
+83df8ae158dc4da376217534418437f1
   putKiller2 ::
     Search.SearchState
     -> Search.SearchEnvironment
@@ -3551,7 +3345,7 @@ ae86cc37c72a79aca491bd5e60930948
      Unfolding: (\ (eta1 :: Search.SearchState)
                    (eta2 :: Search.SearchEnvironment)
                    (eta3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 (# eta3, (Search.$sunless2, eta1) #)) -}
+                 (# eta3, (Search.$sunless_eta, eta1) #)) -}
 657d251ba7fcd3e6e4b6e46b59b5a176
   putMove :: Alias.Move -> Search.Search ()
   {- Arity: 1, Strictness: <L,U>,
@@ -3579,66 +3373,6 @@ dad69c7c1673d5c5839d39b28f39fa2b
     -> Search.Search Alias.Evaluation
   {- Arity: 3,
      Strictness: <L,U(U)><L,U(U)><L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)> -}
-f1a65659422d2897fcc8cf4d159da5b9
-  refer :: GHC.IORef.IORef a -> Search.Search a
-  {- Arity: 4, HasNoCafRefs,
-     Strictness: <S(S),1*U(U)><L,U><L,A><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Search.refer1
-                  `cast`
-                (forall (a :: <*>_N).
-                 <GHC.IORef.IORef a>_R
-                 ->_R Trans
-                          (<Search.SearchState>_R
-                           ->_R Trans
-                                    (<Search.SearchEnvironment>_R
-                                     ->_R Sym (GHC.Types.N:IO[0]
-                                                   <(Data.Either.Either GHC.Types.Int a,
-                                                     Search.SearchState)>_R))
-                                    (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                              <*>_N
-                                              <Search.SearchEnvironment>_R
-                                              <GHC.Types.IO>_R
-                                              <(Data.Either.Either GHC.Types.Int a,
-                                                Search.SearchState)>_N)))
-                          (Trans
-                               (Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
-                                         <Search.SearchState>_N
-                                         <Control.Monad.Trans.Reader.ReaderT
-                                            Search.SearchEnvironment GHC.Types.IO>_R
-                                         <Data.Either.Either GHC.Types.Int a>_N))
-                               (Sym (Control.Monad.Trans.Either.N:EitherT[0]
-                                         <GHC.Types.Int>_N
-                                         <Control.Monad.Trans.State.Strict.StateT
-                                            Search.SearchState
-                                            (Control.Monad.Trans.Reader.ReaderT
-                                               Search.SearchEnvironment GHC.Types.IO)>_R
-                                         <a>_N)))) -}
-caa5bc139fb5abe40e2ff85b26a9db14
-  refer1 ::
-    GHC.IORef.IORef a
-    -> Search.SearchState
-    -> Search.SearchEnvironment
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          (Data.Either.Either GHC.Types.Int a, Search.SearchState) #)
-  {- Arity: 4, HasNoCafRefs,
-     Strictness: <S(S),1*U(U)><L,U><L,A><S,U>,
-     Unfolding: InlineRule (4, True, False)
-                (\ @ a
-                   (x :: GHC.IORef.IORef a)
-                   (eta1 :: Search.SearchState)
-                   (eta2 :: Search.SearchEnvironment)
-                   (eta3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case x `cast`
-                      (GHC.IORef.N:IORef[0] <a>_N) of wild { GHC.STRef.STRef var# ->
-                 case GHC.Prim.readMutVar#
-                        @ GHC.Prim.RealWorld
-                        @ a
-                        var#
-                        eta3 of ds1 { (#,#) ipv ipv1 ->
-                 (# ipv,
-                    (Data.Either.Right @ GHC.Types.Int @ a ipv1, eta1) #) } }) -}
 7339499f94e440b09863220b436b5654
   refutation :: Search.HashEntry -> GHC.Base.Maybe Alias.Move
   RecSel Left Search.HashEntry

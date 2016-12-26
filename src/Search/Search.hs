@@ -68,18 +68,6 @@ initSearchState = SearchState{  _counter        = 0
                             ,   _variation      = []
                             ,   _killers        = Map.empty}
 
-declare :: a -> Search (IORef a)
-declare = liftIO . newIORef
-
-assign :: IORef a -> a -> Search ()
-assign = liftIO .: writeIORef
-
-apply :: (a -> a) -> IORef a -> Search ()
-apply = liftIO .: flip modifyIORef'
-
-refer :: IORef a -> Search a
-refer = liftIO . readIORef
-
 environment :: TableSize -> IO SearchEnvironment
 environment x = do
     tt  <- TT.new x
