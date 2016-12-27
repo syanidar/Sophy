@@ -1,14 +1,14 @@
 name:                Sophy
 version:             0.1.0.0
-synopsis:            Initial project template from stack
+synopsis:            Chess engine
 description:         Please see README.md
-homepage:            https://github.com/githubuser/Sophy#readme
+homepage:            https://github.com/syanidar/Sophy
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2016 Author name here
-category:            Web
+author:              Teguramori Ryo
+maintainer:          syanidar@gmail.com
+copyright:           2016 Teguramori Ryo
+category:            Game
 build-type:          Simple
 -- extra-source-files:
 cabal-version:       >=1.10
@@ -73,4 +73,4 @@ test-suite Sophy-test
 
 source-repository head
   type:     git
-  location: https://github.com/githubuser/Sophy
+  location: https://github.com/syanidar/Sophy
