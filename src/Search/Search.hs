@@ -325,18 +325,6 @@ quiescence alpha beta position =  verifyCutoff $ do
                                     ,   refutation  = moveSelected}
     return score
 
-mtdf :: Depth -> Evaluation -> Position -> Search Evaluation
-mtdf n firstGuess position = mtdf' firstGuess minEval maxEval
-    where
-        mtdf' guess lower upper
-            | lower < upper = do
-                let beta = max (lower + 1) guess
-                eval <- negaScout n (beta - 1) beta PV Allowed position
-                if eval < beta
-                then mtdf' eval lower eval
-                else mtdf' eval eval upper
-            | otherwise     = return guess
-
 aspirationSearch :: Depth -> Evaluation -> Position -> Search Evaluation
 aspirationSearch n guess position = aspire (guess - 25) (guess + 25)
     where
